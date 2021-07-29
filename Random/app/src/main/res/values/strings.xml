@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Random</string>
+    <string name="btn_name">Random Number</string>
+    <string name="number_min">Range Min</string>
+    <string name="number_max">Range Max</string>
+</resources>
