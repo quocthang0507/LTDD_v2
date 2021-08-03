@@ -1,5 +1,6 @@
-package com.dinhtrongdat.lab2bai4;
+package com.dinhtrongdat.menuorder;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,31 +9,30 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
+import org.w3c.dom.Text;
 
 import java.util.List;
 
 public class CustomListAdapter extends BaseAdapter {
 
-    private List<Planet> listData;
+    private List<Food> foodList;
     private int layout;
     private Context context;
 
-    public CustomListAdapter(List<Planet> listData, int layout, Context context) {
-        this.listData = listData;
+    public CustomListAdapter(List<Food> foodList, int layout, Context context) {
+        this.foodList = foodList;
         this.layout = layout;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return listData.size();
-
+        return foodList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return listData.get(i);
+        return foodList.get(i);
     }
 
     @Override
@@ -47,14 +47,16 @@ public class CustomListAdapter extends BaseAdapter {
         view = inflater.inflate(layout, null);
 
         TextView txtName = (TextView) view.findViewById(R.id.txtName);
-        TextView txtDetail = (TextView) view.findViewById(R.id.txtDetail);
+        TextView txtVN = (TextView) view.findViewById(R.id.txtSub);
+        TextView txtPrice = (TextView) view.findViewById(R.id.txtPrice);
         ImageView imgView = (ImageView) view.findViewById(R.id.imageView);
 
-        Planet planet = listData.get(i);
+        Food food = foodList.get(i);
 
-        txtName.setText(planet.getPlanetName());
-        txtDetail.setText(planet.getDetail());
-        imgView.setImageResource(planet.getPic());
+        txtName.setText(food.getFoodName());
+        txtVN.setText(food.getFoddVn());
+        txtPrice.setText(food.getPrice() + "");
+        imgView.setImageResource(food.getFoodPic());
 
         return view;
     }

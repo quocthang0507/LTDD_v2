@@ -1,0 +1,2 @@
+rootProject.name = "Menu Order"
+include ':app'
