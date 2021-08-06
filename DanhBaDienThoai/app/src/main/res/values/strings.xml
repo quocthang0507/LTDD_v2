@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DanhBaDienThoai</string>
+    <string name="txt_ten">Tên</string>
+    <string name="txt_sdt">SĐT</string>
+    <string name="btn_add">Thêm</string>
+    <string name="btngr_gd">Gia đình</string>
+    <string name="btngr_banbe">Bạn bè</string>
+    <string name="btngr_coquan">Cơ quan</string>
+    <string name="btngr_truonghoc">Trường học</string>
+</resources>

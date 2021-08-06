@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_weight="1"
+        android:id="@+id/btn_call"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_txt"
+        android:src="@drawable/ic_call"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_weight="1"
+        android:id="@+id/btn_mess"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_txt"
+        android:src="@drawable/ic_mess"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+    </LinearLayout>
+</LinearLayout>

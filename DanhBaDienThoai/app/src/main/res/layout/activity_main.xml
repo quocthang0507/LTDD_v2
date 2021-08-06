@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:id="@+id/txt_name"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_txt"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txt_ten"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <EditText
+        android:autofillHints="True"
+        android:id="@+id/txt_sdt"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_txt"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/txt_sdt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <RadioGroup
+        android:id="@+id/btngr"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/btngr_fm"
+            android:textSize="15sp"
+            android:text="@string/btngr_gd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btngr_bb"
+            android:textSize="15sp"
+            android:text="@string/btngr_banbe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btngt_cq"
+            android:textSize="15sp"
+            android:text="@string/btngr_coquan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/btngr_th"
+            android:textSize="15sp"
+            android:text="@string/btngr_truonghoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_gravity="center"
+        android:id="@+id/btn_add"
+        android:text="@string/btn_add"
+        android:background="@drawable/custom_txt"
+        android:layout_width="100dp"
+        android:layout_height="50dp"/>
+
+    <ListView
+        android:id="@+id/lv_contast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+
+</LinearLayout>
