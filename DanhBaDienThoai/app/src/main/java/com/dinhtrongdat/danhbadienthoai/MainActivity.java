@@ -1,8 +1,14 @@
 package com.dinhtrongdat.danhbadienthoai;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.Dialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +21,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new CustomAdapter(MainActivity.this, R.layout.custom_adapter, list);
         listView.setAdapter(adapter);
+        checkAndRequesPermissions();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ShowDialog();
+                ShowDialog(i);
             }
         });
 
@@ -90,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btn_add);
     }
 
-    public void ShowDialog(){
+    public void ShowDialog(int position){
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_view);
 
@@ -100,17 +108,50 @@ public class MainActivity extends AppCompatActivity {
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Call", Toast.LENGTH_LONG).show();
+                intentCall(position);
             }
         });
 
         btnMess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Mess", Toast.LENGTH_LONG).show();
+                intentSendMessage(position);
             }
         });
 
         dialog.show();
     }
+
+    private void checkAndRequesPermissions(){
+        String[] permissions = new String[]{
+                Manifest.permission.CALL_PHONE,
+                Manifest.permission.SEND_SMS
+        };
+
+        List<String> listPermissionNeeded = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
+                listPermissionNeeded.add(permission);
+            }
+        }
+        if(!listPermissionNeeded.isEmpty()){
+            ActivityCompat.requestPermissions(this, listPermissionNeeded.toArray(new String[listPermissionNeeded.size()]),1);
+
+        }
+    }
+
+    private void intentCall(int posiotion){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:"+list.get(posiotion).getmNumPhone()));
+        startActivity(intent);
+    }
+
+    private void intentSendMessage(int posiotion){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("tel:"+list.get(posiotion).getmNumPhone()));
+        startActivity(intent);
+    }
+
 }
