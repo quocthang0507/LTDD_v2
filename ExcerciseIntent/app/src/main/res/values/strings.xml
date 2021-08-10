@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Excercise Intent</string>
+    <string name="txt_view">Chọn bài phía dưới</string>
+    <string-array name="list_name">
+        <item>dragon1</item>
+        <item>dragon2</item>
+        <item>dragon3</item>
+        <item>dragon4</item>
+        <item>dragon5</item>
+        <item>dragon6</item>
+        <item>dragon7</item>
+        <item>dragon8</item>
+        <item>dragon9</item>
+        <item>dragon10</item>
+        <item>dragon11</item>
+        <item>dragon12</item>
+    </string-array>
+</resources>
