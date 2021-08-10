@@ -12,4 +12,7 @@ Tài liệu học lập trình ứng dụng Android của mình
 ![image3](https://github.com/Dat0309/learnAndroid/blob/main/SudokuSolver/Screenshot.png)
 ### Danh bạ điện thoại
 ![image5](https://github.com/Dat0309/learnAndroid/blob/main/DanhBaDienThoai/cap1.png)
-![image5](https://github.com/Dat0309/learnAndroid/blob/main/DanhBaDienThoai/cap2.png)
+![image6](https://github.com/Dat0309/learnAndroid/blob/main/DanhBaDienThoai/cap2.png)
+### Bài tập ứng dụng Intent
+![image7](https://github.com/Dat0309/learnAndroid/blob/main/ExcerciseIntent/Screenshot.png)
+![image8](https://github.com/Dat0309/learnAndroid/blob/main/ExcerciseIntent/Screenshot2.png)
