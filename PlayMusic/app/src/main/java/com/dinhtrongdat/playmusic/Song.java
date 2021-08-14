@@ -3,10 +3,12 @@ package com.dinhtrongdat.playmusic;
 public class Song {
     private String title;
     private int file;
+    private int img;
 
-    public Song(String title, int file) {
+    public Song(String title, int file, int img) {
         this.title = title;
         this.file = file;
+        this.img = img;
     }
 
     public String getTitle() {
@@ -23,5 +25,13 @@ public class Song {
 
     public void setFile(int file) {
         this.file = file;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
     }
 }
