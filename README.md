@@ -16,3 +16,5 @@ Tài liệu học lập trình ứng dụng Android của mình
 ### Bài tập ứng dụng Intent
 ![image7](https://github.com/Dat0309/learnAndroid/blob/main/ExcerciseIntent/Screenshot.png)
 ![image8](https://github.com/Dat0309/learnAndroid/blob/main/ExcerciseIntent/Screenshot2.png)
+### Ứng dụng nghe nhạc
+![image](https://github.com/Dat0309/learnAndroid/blob/main/PlayMusic/Screenshot.png)
