@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ToDoListt</string>
+    <string name="dialog_txt">Tên công việc</string>
 </resources>
