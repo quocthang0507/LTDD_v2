@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/custom_edt">
+
+    <TextView
+        android:id="@+id/txt_view_edit"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/dialog_txt"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/dialog_edt_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_edt"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_btn_ok"
+            android:background="@drawable/custom_btn_select"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="OK"
+            android:layout_width="100dp"
+            android:layout_height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_btn_close"
+            android:background="@drawable/custom_btn_select"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="close"
+            android:layout_width="100dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+</LinearLayout>
