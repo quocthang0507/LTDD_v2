@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="nhapX">Nhập X</string>
+    <string name="nhapY">Nhập Y</string>
+    <string name="result">Kết quả</string>
+    <string name="plus">+</string>
+    <string name="dev">%</string>
+    <string name="mul">x</string>
+    <string name="tru">-</string>
+</resources>
