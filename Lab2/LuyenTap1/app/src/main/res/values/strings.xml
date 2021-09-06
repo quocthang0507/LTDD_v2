@@ -6,4 +6,5 @@
         <item>human3</item>
         <item>human4</item>
     </string-array>
+    <string name="txt_loading">Loading</string>
 </resources>
