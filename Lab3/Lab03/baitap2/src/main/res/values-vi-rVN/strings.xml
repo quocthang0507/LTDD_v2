@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ứng dụng đa ngôn ngữ</string>
+    <string name="Title">Xin chào</string>
+    <string name="email">Email</string>
+    <string name="pass">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="des">"Không có tài khoản? Đăng ký "</string>
+</resources>

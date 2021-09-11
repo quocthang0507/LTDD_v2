@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Multi Language App</string>
+    <string name="Title">accueillir</string>
+    <string name="email">adresse e-mail</string>
+    <string name="pass">mot de passe</string>
+    <string name="login">Connexion</string>
+    <string name="des">Ne pas avoir un comtpe? signer</string>
+</resources>

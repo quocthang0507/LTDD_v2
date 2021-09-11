@@ -1,0 +1,3 @@
+rootProject.name = "Lab03"
+include ':app'
+include ':baitap2'
