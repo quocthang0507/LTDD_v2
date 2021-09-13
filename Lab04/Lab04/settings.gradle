@@ -1,0 +1,4 @@
+rootProject.name = "Lab04"
+include ':app'
+include ':englishlearning'
+include ':toastemoji'
