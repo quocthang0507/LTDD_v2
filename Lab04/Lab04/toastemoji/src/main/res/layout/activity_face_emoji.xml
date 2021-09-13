@@ -113,5 +113,14 @@
                 android:src="@drawable/wow"
                 tools:ignore="ContentDescription" />
         </TableRow>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_refres"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_refest"
+            android:background="@drawable/bg_radius"/>
+
     </LinearLayout>
 </FrameLayout>
