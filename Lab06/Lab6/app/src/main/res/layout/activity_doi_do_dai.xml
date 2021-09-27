@@ -17,7 +17,7 @@
             android:inputType="numberDecimal"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/textbox_hint"
+            android:hint="@string/doidodai_hint"
             android:gravity="center"/>
         <Spinner
             android:layout_width="0dp"

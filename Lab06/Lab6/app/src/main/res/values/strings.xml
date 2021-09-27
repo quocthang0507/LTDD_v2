@@ -3,6 +3,7 @@
     <string name="author">Đinh Trọng Đạt 1914775</string>
     <string name="computer">Máy tính cá nhân</string>
     <string name="textbox_hint">Nhập số tiền</string>
+    <string name="doidodai_hint">Nhập độ dài</string>
     <string name="usd_name">American Dollar</string>
     <string name="eur_name">European Cash</string>
     <string name="gbp_name">Greate Britain</string>
