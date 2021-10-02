@@ -1,2 +1,4 @@
 rootProject.name = "Canvas and Multi Thresh"
 include ':app'
+include ':chartdraw'
+include ':gamerace'
