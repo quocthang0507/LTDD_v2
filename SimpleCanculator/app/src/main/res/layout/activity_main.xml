@@ -6,45 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/txtResult"
-        android:textAlignment="textEnd"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nhập phép tính"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="40dp" />
-    <EditText
-        android:id="@+id/txtOut"
-        android:textAlignment="textEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Kết quả"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/txtResult"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập phép tính"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="40dp"/>
+            <EditText
+                android:id="@+id/txtOut"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kết quả"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="40dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <TableLayout
-        android:layout_marginEnd="5dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnClear"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -55,10 +64,10 @@
                 android:backgroundTint="#BD3131"
                 android:onClick="btnClear"
                 android:text="@string/clear"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnPare"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -68,10 +77,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnPare"
                 android:text="@string/pare"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnHead"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -81,10 +90,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnHead"
                 android:text="@string/head"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnDev"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -94,13 +103,13 @@
                 android:background="@drawable/circle"
                 android:onClick="btnDev"
                 android:text="@string/dev"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnSeven"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -110,10 +119,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnSeven"
                 android:text="@string/seven"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnEight"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -123,10 +132,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnEight"
                 android:text="@string/eight"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnNight"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -136,10 +145,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnNine"
                 android:text="@string/night"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnMul"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -149,13 +158,13 @@
                 android:background="@drawable/circle"
                 android:onClick="btnMul"
                 android:text="@string/mul"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnFore"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -165,10 +174,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnFore"
                 android:text="@string/fore"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnFive"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -178,10 +187,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnFive"
                 android:text="@string/five"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnSix"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -191,10 +200,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnSix"
                 android:text="@string/six"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnSub"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -204,13 +213,13 @@
                 android:background="@drawable/circle"
                 android:onClick="btnSub"
                 android:text="@string/sub"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnOne"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -220,10 +229,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnOne"
                 android:text="@string/one"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnTwo"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -233,10 +242,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnTwo"
                 android:text="@string/two"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnThree"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -246,10 +255,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnThree"
                 android:text="@string/three"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnPlus"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -259,13 +268,13 @@
                 android:background="@drawable/circle"
                 android:onClick="btnPlus"
                 android:text="@string/plus"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnDelete"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -275,10 +284,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnDelete"
                 android:text="Delete"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnZero"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -288,10 +297,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnZero"
                 android:text="@string/zero"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnDot"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -301,10 +310,10 @@
                 android:background="@drawable/circle"
                 android:onClick="btnDot"
                 android:text="@string/dot"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:textStyle="bold"
                 android:id="@+id/btnEqual"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
@@ -315,7 +324,8 @@
                 android:backgroundTint="#305C32"
                 android:onClick="btnEqual"
                 android:text="@string/equal"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </TableRow>
 
     </TableLayout>

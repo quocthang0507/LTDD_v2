@@ -151,11 +151,8 @@ public class MainActivity extends AppCompatActivity {
                 out.setText(rs +"");
             }
             catch (Exception e){
-
             }
         }
-
-
     }
 
     public void btnDot(View view){
