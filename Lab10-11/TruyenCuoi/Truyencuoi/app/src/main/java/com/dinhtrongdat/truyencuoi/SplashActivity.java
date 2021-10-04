@@ -1,11 +1,17 @@
 package com.dinhtrongdat.truyencuoi;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,25 +19,28 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Fragment {
+    private Context mContext;
 
     LottieAnimationView splash;
     TextView txtName, txtDes;
     Animation animDes, animLayout, animName;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_splash, container, false);
+        initUI(rootView);
+        return rootView;
+    }
 
-        splash = findViewById(R.id.splash_main);
-        txtName = findViewById(R.id.txtName);
-        txtDes = findViewById(R.id.txt_description);
+    private void initUI(View view) {
+        splash = view.findViewById(R.id.splash_main);
+        txtName = view.findViewById(R.id.txtName);
+        txtDes = view.findViewById(R.id.txt_description);
 
-        animDes = AnimationUtils.loadAnimation(this,R.anim.anim_fall_down);
-        animName = AnimationUtils.loadAnimation(this,R.anim.anim_top);
-        animLayout = AnimationUtils.loadAnimation(this,R.anim.anim_bot_to_top);
+        animDes = AnimationUtils.loadAnimation(mContext,R.anim.anim_fall_down);
+        animName = AnimationUtils.loadAnimation(mContext,R.anim.anim_top);
+        animLayout = AnimationUtils.loadAnimation(mContext,R.anim.anim_bot_to_top);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -51,13 +60,18 @@ public class SplashActivity extends AppCompatActivity {
                 },1000);
             }
         },500);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 6000);
+
+        new Handler().postDelayed(this::gotoM001Screen, 6700);
     }
+
+    private void gotoM001Screen() {
+        ((MainActivity) getActivity()).gotoM001Screen();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
+    }
+
 }
