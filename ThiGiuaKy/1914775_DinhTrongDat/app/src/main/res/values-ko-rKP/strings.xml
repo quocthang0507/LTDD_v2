@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Đinh Trọng Đạt (1914775) - Đề số 1</string>
+    <string name="app_value">값을 입력하십시오</string>
+    <string name="app_fullname">성명</string>
+    <string name="app_X">X 값</string>
+    <string name="app_Y">Y 값</string>
+    <string name="app_Z">Z 값</string>
+    <string name="app_clear">클리어 화이트</string>
+    <string name="app_back">돌아서</string>
+    <string name="app_result">계산 결과</string>
+    <string name="app_ok">동의</string>
+    <string name="app_plus">추가</string>
+    <string name="app_exp">제곱</string>
+    <string name="app_mul">곱셈</string>
+</resources>

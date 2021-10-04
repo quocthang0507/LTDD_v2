@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActTinhToan"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_result"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_fullname"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtPlus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_plus"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/txtMul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_mul"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/txtExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_exp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBack"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/app_back"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_radius"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
