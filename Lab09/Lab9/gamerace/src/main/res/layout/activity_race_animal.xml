@@ -13,19 +13,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/cb2"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:button="@drawable/custom_checkbox"/>
     <CheckBox
         android:id="@+id/cb2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/cb3"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:button="@drawable/custom_checkbox"/>
     <CheckBox
         android:id="@+id/cb3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:button="@drawable/custom_checkbox"/>
     
     <SeekBar
         android:progressDrawable="@android:color/transparent"
