@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -70,6 +71,13 @@ public class M001TopicFrg extends Fragment implements TopicAdapter.ListItemClick
 
     @Override
     public void onTopicListClick(int clickedItemIndex) {
-
+        try{
+            String[] listName = mContext.getAssets().list("story");
+            String name = listName[clickedItemIndex];
+            String topicName = name.substring(0,name.indexOf("."));
+            ((MainActivity)getActivity()).gotoM002Screen(topicName);
+//            Toast.makeText(mContext,topicName,Toast.LENGTH_LONG).show();
+        }catch (IOException e){
+        }
     }
 }

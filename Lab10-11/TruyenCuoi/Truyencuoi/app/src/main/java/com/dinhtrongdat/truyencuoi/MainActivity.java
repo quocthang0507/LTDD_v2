@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+import com.dinhtrongdat.truyencuoi.adapter.StoryAdapter;
+import com.dinhtrongdat.truyencuoi.model.StoryEntity;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,10 +33,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoM002Screen(String tag) {
-
+        M002StoryFrg frg = new M002StoryFrg(tag);
+//        Toast.makeText(this,tag,Toast.LENGTH_LONG).show();
+        showFrg(frg);
     }
 
     public void backToM001Screen() {
         gotoM001Screen();
+    }
+
+    public void gotoM003Screen(ArrayList<StoryEntity> storyLocation, StoryEntity story) {
+        M003DetailStoryFrg frg = new M003DetailStoryFrg();
+        frg.setData(topicName,storyLocation, story);
     }
 }
