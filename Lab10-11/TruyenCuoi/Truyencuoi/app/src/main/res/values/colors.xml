@@ -11,4 +11,6 @@
     <color name="greenMid">#464745</color>
     <color name="greenLight">#717371</color>
     <color name="greenSuperLight">#E1E1E1</color>
+    <color name="toolbar">#3A312E</color>
+    <color name="scrim">#717371</color>
 </resources>
