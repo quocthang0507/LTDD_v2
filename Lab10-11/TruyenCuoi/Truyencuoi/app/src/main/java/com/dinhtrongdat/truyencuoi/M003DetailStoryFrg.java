@@ -1,10 +1,12 @@
 package com.dinhtrongdat.truyencuoi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,44 +20,24 @@ import com.dinhtrongdat.truyencuoi.model.StoryEntity;
 import java.util.ArrayList;
 
 public class M003DetailStoryFrg extends Fragment {
-    private Context mContext;
-    private ArrayList<StoryEntity> listStory;
-    private String topicName;
-    private StoryEntity currentStory;
 
+    private TextView txtName, txtContent;
     @Override
     public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.m003_frg_detail_story, container, false);
-        initUI(rootView);
+        View rootView = inflater.inflate(R.layout.ite_detail_story, container, false);
+
+        txtName = rootView.findViewById(R.id.tv_name);
+        txtContent = rootView.findViewById(R.id.tv_content);
+
+        Bundle bundle = getArguments();
+        if(bundle != null){
+            StoryEntity storyEntity = (StoryEntity) bundle.get("story");
+            if(storyEntity!=null){
+                txtName.setText(storyEntity.getName());
+                txtContent.setText(storyEntity.getContent());
+            }
+        }
         return rootView;
-    }
-
-    private void initUI(View view) {
-        view.findViewById(R.id.iv_back).setVisibility(View.VISIBLE);
-        view.findViewById(R.id.iv_back).setOnClickListener(view1 -> gotoM002Screen(topicName));
-        view.findViewById(R.id.vp_story);
-        ViewPager vp = view.findViewById(R.id.vp_story);
-        DetailStoryAdapter adapter = new DetailStoryAdapter(listStory, mContext);
-        vp.setAdapter(adapter);
-        vp.setCurrentItem(listStory.indexOf(currentStory), true);
-    }
-
-    private void backToM001Screen(){
-        ((MainActivity)getActivity()).backToM001Screen();
-    }
-
-    private void gotoM002Screen(String topicName) {
-    }
-    public void setData(String topicName, ArrayList<StoryEntity> listStory, StoryEntity currentStory){
-        this.currentStory = currentStory;
-        this.topicName = topicName;
-        this.listStory = listStory;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mContext = context;
     }
 
 }

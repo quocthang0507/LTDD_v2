@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TruyenCuoi">
-        <activity android:name=".MainActivity">
+        <activity android:name=".DetailStoryAct"></activity>
+        <activity android:name=".StoryAct" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

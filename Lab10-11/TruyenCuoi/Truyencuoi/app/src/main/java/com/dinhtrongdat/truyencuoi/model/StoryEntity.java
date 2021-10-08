@@ -3,9 +3,9 @@ package com.dinhtrongdat.truyencuoi.model;
 import java.io.Serializable;
 
 public class StoryEntity implements Serializable {
-    private final String topicName;
-    private final String name;
-    private final String content;
+    private String topicName;
+    private String name;
+    private String content;
 
     public StoryEntity(String topicName, String name, String content) {
         this.topicName = topicName;
@@ -23,5 +23,17 @@ public class StoryEntity implements Serializable {
 
     public String getContent() {
         return content;
+    }
+
+    public void setTopicName(String topicName) {
+        this.topicName = topicName;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

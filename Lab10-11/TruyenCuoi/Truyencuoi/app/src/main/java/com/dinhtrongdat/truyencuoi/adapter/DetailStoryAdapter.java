@@ -1,14 +1,18 @@
 package com.dinhtrongdat.truyencuoi.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.dinhtrongdat.truyencuoi.M003DetailStoryFrg;
 import com.dinhtrongdat.truyencuoi.R;
 import com.dinhtrongdat.truyencuoi.model.StoryEntity;
 
@@ -16,40 +20,30 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
-public class DetailStoryAdapter extends PagerAdapter {
-    private final List<StoryEntity> listStory;
-    private final Context mContext;
+public class DetailStoryAdapter extends FragmentStatePagerAdapter {
+    private List<StoryEntity> listStory;
 
-    public DetailStoryAdapter(List<StoryEntity> listStory, Context mContext) {
+    public DetailStoryAdapter(FragmentManager fm, int behavior,List<StoryEntity> listStory) {
+        super(fm, behavior);
         this.listStory = listStory;
-        this.mContext = mContext;
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.ite_detail_story,container,false);
-        StoryEntity item = listStory.get(position);
+    public Fragment getItem(int position) {
+        if(listStory == null || listStory.isEmpty()){
+            return null;
+        }
 
-        TextView tvName = view.findViewById(R.id.tv_name);
-        TextView tvContent = view.findViewById(R.id.tv_content);
-        tvName.setTag(item);
-        tvName.setText(item.getName());
-        tvContent.setText(item.getContent());
-        container.addView(view);
-        return view;
+        StoryEntity storyEntity = listStory.get(position);
+        M003DetailStoryFrg frg = new M003DetailStoryFrg();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("story",storyEntity);
+        frg.setArguments(bundle);
+        return frg;
     }
 
     @Override
     public int getCount() {
         return listStory.size();
-    }
-
-    public boolean isViewFromObject(View view, Object object) {
-        return view.equals(object);
-    }
-
-    @Override
-    public void destroyItem( ViewGroup container, int position,  Object object) {
-        container.removeView((View) object);
     }
 }

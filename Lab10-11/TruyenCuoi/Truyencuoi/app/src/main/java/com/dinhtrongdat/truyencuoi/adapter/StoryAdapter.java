@@ -15,12 +15,12 @@ import com.dinhtrongdat.truyencuoi.model.StoryEntity;
 import java.util.ArrayList;
 
 public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHolder> {
-    private final ArrayList<StoryEntity> storyLocation;
-    private final Context mContext;
+    private ArrayList<StoryEntity> storyLocation;
+    private final ListItemClickListener mOnClickListener;
 
-    public StoryAdapter(ArrayList<StoryEntity> storyLocation, Context mContext) {
+    public StoryAdapter(ArrayList<StoryEntity> storyLocation,ListItemClickListener mOnClickListener) {
         this.storyLocation = storyLocation;
-        this.mContext = mContext;
+        this.mOnClickListener = mOnClickListener;
     }
 
     @Override
@@ -41,15 +41,23 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
         return storyLocation.size();
     }
 
-    public class StoryViewHolder extends RecyclerView.ViewHolder {
+    public interface ListItemClickListener {
+        void onStoryListClick(int clickedItemIndex);
+    }
+
+    public class StoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvName;
+
         public StoryViewHolder(View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tv_story);
-            itemView.setOnClickListener(view -> {
-                ((MainActivity)mContext).gotoM003Screen(storyLocation,(StoryEntity)tvName.getTag());
-            });
+            itemView.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View view) {
+            int clickedPosition = getAdapterPosition();
+            mOnClickListener.onStoryListClick(clickedPosition);
+        }
     }
 }
