@@ -18,3 +18,13 @@ Tài liệu học lập trình ứng dụng Android của mình
 ![image8](https://github.com/Dat0309/learnAndroid/blob/main/ExcerciseIntent/Screenshot2.png)
 ### Ứng dụng nghe nhạc
 ![image](https://github.com/Dat0309/learnAndroid/blob/main/PlayMusic/Screenshot.png)
+### Đổi tiền tệ
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab06/home.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab06/doitiente.png)
+### App Đọc truyện
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/splash.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/Home.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/scrolling.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/story.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/detail.png)
+![image](https://github.com/Dat0309/learnAndroid/blob/main/Lab10-11/viewpager.png)
