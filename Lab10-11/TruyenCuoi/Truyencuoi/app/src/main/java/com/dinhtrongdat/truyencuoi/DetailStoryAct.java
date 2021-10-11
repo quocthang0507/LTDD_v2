@@ -28,6 +28,8 @@ public class DetailStoryAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_story);
+        mdata = new ArrayList<>();
+        mdata = (ArrayList<StoryEntity>) getIntent().getExtras().get("data");
         initUI();
     }
 
@@ -42,13 +44,12 @@ public class DetailStoryAct extends AppCompatActivity {
                 startActivity(new Intent(DetailStoryAct.this, StoryAct.class));
             }
         });
-
+        StoryEntity currentStory = (StoryEntity) getIntent().getExtras().get("current_data");
         ttxtNameTopic.setText(getIntent().getStringExtra("topic"));
-        mdata = new ArrayList<>();
-        mdata = (ArrayList<StoryEntity>) getIntent().getExtras().get("data");
         detailStoryAdapter = new DetailStoryAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,mdata);
-        detailStoryAdapter.notifyDataSetChanged();
         viewPager.setAdapter(detailStoryAdapter);
-        viewPager.setCurrentItem(mdata.indexOf((StoryEntity) getIntent().getExtras().get("current_data")), true);
+        viewPager.setCurrentItem(mdata.indexOf(currentStory), true);
+        detailStoryAdapter.notifyDataSetChanged();
+//        Toast.makeText(this, ((StoryEntity) getIntent().getExtras().get("current_data")).getName(), Toast.LENGTH_LONG).show();
     }
 }

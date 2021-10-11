@@ -33,7 +33,6 @@ public class DetailStoryAdapter extends FragmentStatePagerAdapter {
         if(listStory == null || listStory.isEmpty()){
             return null;
         }
-
         StoryEntity storyEntity = listStory.get(position);
         M003DetailStoryFrg frg = new M003DetailStoryFrg();
         Bundle bundle = new Bundle();
