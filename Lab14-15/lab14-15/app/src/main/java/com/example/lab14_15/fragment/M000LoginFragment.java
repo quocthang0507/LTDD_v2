@@ -16,11 +16,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.lab14_15.MainActivity;
 import com.example.lab14_15.R;
+import com.example.lab14_15.db.SQLiteHelper;
 
 public class M000LoginFragment extends Fragment implements View.OnClickListener {
 
     private EditText edtEmail,edtPass;
     private Context mContext;
+    SQLiteHelper helper;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -63,17 +65,20 @@ public class M000LoginFragment extends Fragment implements View.OnClickListener 
             Toast.makeText(mContext, "Empty value", Toast.LENGTH_SHORT).show();
             return;
         }
-        SharedPreferences pref = mContext.getSharedPreferences(MainActivity.SAVE_PREF, Context.MODE_PRIVATE);
-        String savedPass = pref.getString(mail,null);
-        if(savedPass == null){
-            Toast.makeText(mContext, "Email is not existed!", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if(!pass.equals(savedPass)){
-            Toast.makeText(mContext, "Password is not correct!", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        SharedPreferences pref = mContext.getSharedPreferences(MainActivity.SAVE_PREF, Context.MODE_PRIVATE);
+//        String savedPass = pref.getString(mail,null);
+//        if(savedPass == null){
+//            Toast.makeText(mContext, "Email is not existed!", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//        if(!pass.equals(savedPass)){
+//            Toast.makeText(mContext, "Password is not correct!", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
-        Toast.makeText(mContext, "Login account successfully!", Toast.LENGTH_SHORT).show();
+        if(helper.login(mail,pass))
+            Toast.makeText(mContext, "Login account successfully!", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(mContext, "Wrong email or password", Toast.LENGTH_SHORT).show();
     }
 }
