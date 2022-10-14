@@ -1,0 +1,2 @@
+rootProject.name = "ListAndroid"
+include ':app'

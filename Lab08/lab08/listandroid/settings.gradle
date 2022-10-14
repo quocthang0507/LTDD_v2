@@ -1,4 +1,0 @@
-rootProject.name = "ListAndroid"
-include ':app'
-include ':menuorder'
-include ':customgridview'
