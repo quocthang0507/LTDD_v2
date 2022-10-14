@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Truyện cười</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_congai">Con gái</string>
+    <string name="txt_story">Vừa đúng vừa sai</string>
+    <string name="description">Made by Đinh Trọng Đạt</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="name_topic">Danh sách thể loại</string>
+    <string name="regex">\',\'0\');</string>
+    <string name="story1">
+        Lúc bé, nghỉ học là chuyện lạ. Lớn lên mới biết, chuyện lạ là đi học.
+
+        Lúc bé, tưởng đến trường là phải học. Lớn lên mới biết, đến trường còn được ngủ.
+
+        Lúc bé, tưởng thi xong là hết. Lớn lên mới biết , sau thi còn có thi lại.
+
+        Lúc bé , tưởng điểm 10 mới là giỏi. Lớn lên mới biết, chỉ 5 thôi đã quý lắm rồi.
+
+        Lúc bé, tưởng càng học càng giỏi....
+
+        Lớn lên mới biết, càng học càng ngu
+    </string>
+    <string name="story2">Cô con gái rón rén định ra khỏi nhà lúc gần đi ngủ thì bị ông bố chặn lại:
+
+- Muộn thế này còn định đi đâu nữa?
+
+- Con định chạy ù ra thùng thư để bỏ hai lá thư thôi ạ!
+
+- Thế thì nhanh lên một chút, thùng thư đó đã huýt sáo hai lần rồi đấy!</string>
+    <string name="story3">Đêm tân hôn chàng hỏi nàng:
+
+- Em đang nghĩ gì vậy, em yêu?
+
+- Cô vợ e thẹn đáp: Cũng như anh thôi.
+
+- Nào, vậy thì hai ta cùng xuống bếp chén nốt chỗ bánh ngọt đi!</string>
+    <string name="story4">Người da trắng đến khai hoá văn minh cho người da đỏ. Mùa đông đến, người da đỏ hỏi:
+
+- Mùa đông năm nay liệu có lạnh không?
+
+- Thì các anh cứ đi kiếm củi về đi, dự phòng khi trời lạnh.
+
+- Vốn cẩn thận và nhiệt tình, người da trắng liền gọi điện đến trạm thủy văn để hỏi xem mùa đông năm nay có lạnh không. Người ở đài thuỷ văn trả lời Có lạnh đấy.
+
+- Ngay lập tức, người da trắng liền bảo người da đỏ đi kiếm thêm củi. Hai tuần sau, người da trắng lại gọi điện cho nhà thuỷ văn và nhận được câu trả lời: Lạnh lắm đấy.
+
+- Nguời da trắng liền đó giục người da đỏ kiếm thêm củi. Hai tuần sau nữa, họ lại gọi điện và nhà thuỷ văn trả lời: Cực kỳ lạnh đấy.
+
+- Thế làm sao ông biết?
+
+- Nhìn thực tế thì thấy. Người da đỏ đang đi kiếm đầy củi về nhà đấy thôi.</string>
+    <string name="story5">Edison phát minh một dụng cụ điện tử, ông muốn bán phát minh này với giá 3.000 USD, và tự nhủ nếu các thương gia chỉ trả 2.000 USD cũng được. Lúc gặp nhau, họ hỏi ông về giá cả, Edison lúng túng không biết phải nói như thế nào. Một người trong số họ đành phải bắt đầu trước:
+
+- Chúng tôi không trả cao đâu, ông nghĩ sao với cái giá 40.000 USD?</string>
+    <string name="story6">Một ông mục sư nói với các giáo dân:
+
+- Tuần tới tôi sẽ thuyết giảng về tội nói dối. Để giúp các bạn nhanh chóng nắm được vấn đề, tôi muốn tất cả đọc trước chương 17 quyển Mark.
+
+- Chủ nhật sau đó, để mở đầu bài giảng, mục sư liền yêu cầu những người đã đọc chương 17 quyển Mark giơ tay. Tất cả đều giơ tay. Ông mục sư cười và nói: Tốt! Bây giờ tôi sẽ tiến hành bài giảng về tội nói dối. Quyển Mark chỉ có 16 chương...</string>
+    <string name="story7">Y tá chuẩn bị tiêm thuốc, chợt bệnh nhân kêu toáng lên:
+
+- Á… Á! Đau quá!
+
+- Ông này hay nhỉ? Tôi đã tiêm đâu mà ông kêu ầm lên thế!
+
+- Chân! Chân! Gót giày của cô đâm thủng chân tôi rồi!</string>
+    <string name="story8">Một bà có tính hà tiện và tham lam nằm mơ thấy Thượng đế, liền hỏi:
+
+- Thưa ngài, 100 năm của hạ giới bằng bao nhiêu ngày trên thượng giới?
+
+- Con ơi, không thể tính bằng ngày mà chỉ bằng một phút thôi.
+
+- Thế 100 triệu đồng thì sao?
+
+- Chỉ đáng 1 xu trên thượng giới mà thôi.
+
+- Vậy xin ngài rủ lòng thương ban cho con 1 xu. Con sống nghèo khổ lắm.
+
+- Được, con hãy đợi ta một phút nhé!</string>
+    <string name="story9">Thầy đồ gõ thước : - Các em im lặng, im lặng đến độ nghe thấy tiếng ruồi bay cho tôi! - Tất cả nghe lời thầy, không dám nhúc nhích. Bỗng Quỷnh lên tiếng: Dạ, sao nãy giờ thầy còn chưa thả ruồi ra!!!</string>
+    <string name="story10">Trong giờ họ Lịch sử, tèo đang lim dim ngủ.
+
+Cô giáo gọi: Tèo, em hãy cho cô biết một di tích hóa thạch của nước ta.
+
+- Tèo ú ớ đứng dậy: Thưa cô, đó là …nàng Tô Thị ạ!</string>
+    <string name="story11">Nhân viên đến cơ quan làm việc với hai tai băng bó. Sếp ngạc nhiên hỏi:
+
+- Chuyện gì đã xảy ra với cậu vậy?
+
+- Hôm qua, vợ đi vắng nên tôi phải ủi đồ. Khi cô ấy gọi điện thoại về, tôi đã sơ ý nhấc bàn ủi lên nghe.
+
+- Vô lý! Tại sao tai kia của anh cũng bị băng bó?
+
+- Thưa, tôi lại nhầm lần nữa vì vội gọi bác sĩ.</string>
+    <string name="story12">- Tại sao một con ngựa đau cả đàn ngựa lại không ăn cỏ?
+- Thưa cô vì đàn ngựa cảnh giác ạ.
+- Nghĩa là sao?
+- Thưa cô, đàn ngựa sợ ngộ độc thực phẩm!
+- ?!</string>
+    <string name="story13">Một học sinh nghỉ học không có lý do.
+
+- Cô giáo hỏi:Tại sao hôm qua em không đi học?
+
+- Thưa cô... vì em bị ốm ạ.
+
+- Chậm nhất là ngày mai em phải đưa cô giấy của bố hoặc mẹ em.
+
+- Vâng, thưa cô.
+
+Hôm sau, học sinh đưa cô giáo tờ giấy có những dòng chữ sau đây: Thưa cô giáo, con tôi nghỉ học hôm qua vì nó bị ốm. Chào cô. Bố em.</string>
+    <string name="story14">- Tí: Tớ đố cậu con gì chưa nấu đã chín ?
+- Tèo: Chả có con gì cả ! Cậu này hay đùa dai .
+- Tí: Sao lại không có ?
+- Tèo: Thế cậu bảo con gì ?
+- Tí: Con 33 chứ con gì ? 3*3 chả bằng chín thì bằng mấy ?
+- Tèo: Trời !!!</string>
+</resources>

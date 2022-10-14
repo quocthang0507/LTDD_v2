@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">EnglishLearning</string>
+    <string name="txt_mess">Essentials</string>
+    <string name="txt_flight">Traveling</string>
+    <string name="txt_hospital">Medical</string>
+    <string name="txt_hotel">Hotel</string>
+    <string name="txt_restaurant">Restaurant</string>
+    <string name="txt_coctail">Bar</string>
+    <string name="txt_store">Store</string>
+    <string name="txt_work">Work</string>
+    <string name="txt_time">Time</string>
+    <string name="txt_education">Education</string>
+    <string name="txt_movie">Entertainment</string>
+    <string-array name="Essentials">
+        <item>Accumulator</item>
+        <item>Addition</item>
+        <item>Address</item>
+        <item>Appropriate</item>
+    </string-array>
+    <string-array name="Traveling">
+        <item>Airline schedule</item>
+        <item>Check-in</item>
+        <item>Deposit</item>
+        <item>Round trip</item>
+    </string-array>
+    <string-array name="Medical">
+        <item>Head rest</item>
+        <item>Bandage</item>
+        <item>Chart</item>
+        <item>Scalpel</item>
+    </string-array>
+    <string-array name="Hotel">
+        <item>Vacancy</item>
+        <item>Room Service</item>
+        <item>Room Number</item>
+        <item>King-Size Bed</item>
+    </string-array>
+    <string-array name="Restaurant">
+        <item>taste</item>
+        <item>eat (lunch/dinner)</item>
+        <item>pay/ask for</item>
+        <item>service</item>
+    </string-array>
+    <string-array name="Bar">
+        <item>blender</item>
+        <item>jounce</item>
+        <item>jigger</item>
+        <item>peeler</item>
+    </string-array>
+    <string-array name="Store">
+        <item>Baker</item>
+        <item>Butcher</item>
+        <item>Diy store</item>
+        <item>Greengrocer</item>
+    </string-array>
+    <string-array name="Work">
+        <item>Curriculum vitae</item>
+        <item>full-time</item>
+        <item>working conditions</item>
+        <item>qualifications</item>
+    </string-array>
+    <string-array name="Time">
+        <item>Usually</item>
+        <item>Every day or daily</item>
+        <item>yesterday</item>
+        <item>last week</item>
+    </string-array>
+    <string-array name="Education">
+        <item>College</item>
+        <item>Vocational</item>
+        <item>Literate</item>
+        <item>Thesis</item>
+    </string-array>
+    <string-array name="Entertainment">
+        <item>Entertain</item>
+        <item>Admission</item>
+        <item>Perform</item>
+        <item>Performance</item>
+    </string-array>
+</resources>

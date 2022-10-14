@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LuyenTap1</string>
+    <string-array name="arr_human">
+        <item>human1</item>
+        <item>human2</item>
+        <item>human3</item>
+        <item>human4</item>
+    </string-array>
+    <string name="txt_loading">Loading</string>
+</resources>

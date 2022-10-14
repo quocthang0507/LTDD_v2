@@ -1,0 +1,3 @@
+rootProject.name = "Truyen Cuoi"
+include ':app'
+include ':zodiacapp'

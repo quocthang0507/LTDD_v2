@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LuyenTap3</string>
+    <string name="txt_name">Đinh Trọng Đạt</string>
+    <string name="txt_phone1">0865447141</string>
+    <string name="txt_title_mobile">Mobile</string>
+    <string name="txt_phone2">(323) 555-6789</string>
+    <string name="txt_email">1914775@dlu.edu.vn</string>
+</resources>
