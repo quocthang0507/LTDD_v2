@@ -1,4 +1,4 @@
-package com.example.truyencuoi;
+package com.example.truyencuoi.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.truyencuoi.R;
+import com.example.truyencuoi.classes.StoryEntity;
+import com.example.truyencuoi.adapters.ListStoryAdapter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

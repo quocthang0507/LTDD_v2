@@ -1,12 +1,9 @@
 package com.dinhtrongdat.luyentap1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Layout;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -14,13 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.ybq.android.spinkit.sprite.Sprite;
 import com.github.ybq.android.spinkit.style.Circle;
-import com.github.ybq.android.spinkit.style.DoubleBounce;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtView;
     ProgressBar progressBar;
     private static int SPLAS_SCREEN = 5000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Hook();
     }
 
-    private void Hook(){
+    private void Hook() {
         Random random = new Random();
         imgView = (ImageView) findViewById(R.id.img_view);
         txtView = (TextView) findViewById(R.id.txt_view);
@@ -55,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 //        imgView.setImageResource(idHinh);
 //
         Anim = AnimationUtils.loadAnimation(this, R.anim.anim);
-        int color = Color.argb(255,random.nextInt(256),random.nextInt(256),random.nextInt(256));
+        int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
 
         layout.setBackgroundColor(color);
         imgView.setAnimation(Anim);

@@ -1,4 +1,4 @@
-package com.example.truyencuoi;
+package com.example.truyencuoi.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.truyencuoi.R;
 
 public class ThirdActivity extends AppCompatActivity {
     private TextView txtArticle, txtTitle, txtSubHeadingTitle;
