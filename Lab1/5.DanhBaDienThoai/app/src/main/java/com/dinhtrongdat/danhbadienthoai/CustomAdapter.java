@@ -13,12 +13,12 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<contast> {
+public class CustomAdapter extends ArrayAdapter<Contact> {
     private Context context;
     private int resource;
-    private List<contast> list;
+    private List<Contact> list;
 
-    public CustomAdapter(@NonNull Context context, int resource, @NonNull List<contast> objects) {
+    public CustomAdapter(@NonNull Context context, int resource, @NonNull List<Contact> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
@@ -31,7 +31,7 @@ public class CustomAdapter extends ArrayAdapter<contast> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         ViewHolder viewHolder;
 
-        if(convertView == null){
+        if (convertView == null) {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.custom_adapter, parent, false);
 
@@ -41,26 +41,22 @@ public class CustomAdapter extends ArrayAdapter<contast> {
 
             convertView.setTag(viewHolder);
 
-        }
-        else{
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        contast con = list.get(position);
+        Contact con = list.get(position);
 
         viewHolder.textName.setText(con.getmName());
         viewHolder.textNum.setText(con.getmNumPhone());
 
-        if(con.getmAvatar().equals("Gia đình")){
+        if (con.getmAvatar().equals("Gia đình")) {
             viewHolder.imgAvatar.setBackgroundResource(R.drawable.family);
-        }
-        else if (con.getmAvatar().equals("Bạn bè")){
+        } else if (con.getmAvatar().equals("Bạn bè")) {
             viewHolder.imgAvatar.setBackgroundResource(R.drawable.relation);
-        }
-        else if (con.getmAvatar().equals("Cơ quan")){
+        } else if (con.getmAvatar().equals("Cơ quan")) {
             viewHolder.imgAvatar.setBackgroundResource(R.drawable.busines);
-        }
-        else if(con.getmAvatar().equals("Trường học")){
+        } else if (con.getmAvatar().equals("Trường học")) {
             viewHolder.imgAvatar.setBackgroundResource(R.drawable.meeting);
         }
 
@@ -68,7 +64,7 @@ public class CustomAdapter extends ArrayAdapter<contast> {
         return convertView;
     }
 
-    public class ViewHolder{
+    public class ViewHolder {
         ImageView imgAvatar;
         TextView textName;
         TextView textNum;

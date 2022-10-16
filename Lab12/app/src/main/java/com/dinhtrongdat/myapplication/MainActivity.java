@@ -69,19 +69,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         loadingListSongOffice();
     }
+
     public void playSong(SongEntity tag) {
         index = listSong.indexOf(tag);
         this.songEntity = tag;
         play();
     }
+
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.iv_play) {
-            if(isPlay){
+            if (isPlay) {
                 ivPlay.setImageResource(R.drawable.ic_baseline_pause_24);
                 isPlay = false;
-            }
-            else {
+            } else {
                 ivPlay.setImageResource(R.drawable.ic_baseline_play_arrow_24);
                 isPlay = true;
             }
@@ -95,11 +96,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @SuppressLint("Range")
     private void loadingListSongOffice() {
-        Cursor c = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,null,null,null,null);
-        if(c != null){
+        Cursor c = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null, null, null);
+        if (c != null) {
             c.moveToFirst();
             listSong.clear();
-            while(!c.isAfterLast()){
+            while (!c.isAfterLast()) {
                 @SuppressLint("Range")
                 String name = c.getString(c.getColumnIndex(MediaStore.Audio.Media.TITLE));
                 @SuppressLint("Range")
@@ -168,9 +169,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             loadingListSongOffice();
-        }else{
+        } else {
             Toast.makeText(this, R.string.txt_alert, Toast.LENGTH_SHORT).show();
             finish();
         }
@@ -216,7 +217,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             player.seekTo(seekBar.getProgress());
         }
     }
+
     private void play() {
+        if (listSong.size() == 0)
+            return;
         songEntity = listSong.get(index);
         tvName.setText(songEntity.getName());
         tvAlbum.setText(songEntity.getAlbum());

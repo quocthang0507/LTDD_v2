@@ -3,10 +3,10 @@
 
     <item
         android:id="@+id/menuAdd"
-        android:title="Thêm mới"/>
+        android:title="Thêm mới" />
 
     <item
         android:id="@+id/menuExit"
-        android:title="Thoát"/>
+        android:title="Thoát" />
 
 </menu>

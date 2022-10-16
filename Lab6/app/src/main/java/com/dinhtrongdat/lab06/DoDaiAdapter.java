@@ -24,7 +24,7 @@ public class DoDaiAdapter extends RecyclerView.Adapter<DoDaiAdapter.dodaiViewHol
 
     @Override
     public dodaiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_dodai,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_item_dodai, parent, false);
         return new dodaiViewHolder(view);
     }
 
@@ -43,6 +43,7 @@ public class DoDaiAdapter extends RecyclerView.Adapter<DoDaiAdapter.dodaiViewHol
     public class dodaiViewHolder extends RecyclerView.ViewHolder {
 
         TextView name, number;
+
         public dodaiViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.lb_name_donvi);

@@ -20,13 +20,13 @@ import com.example.lab14_15.db.SQLiteHelper;
 
 public class M000LoginFragment extends Fragment implements View.OnClickListener {
 
-    private EditText edtEmail,edtPass;
+    private EditText edtEmail, edtPass;
     private Context mContext;
     SQLiteHelper helper;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.m000_frg_login, container,false);
+        View rootView = inflater.inflate(R.layout.m000_frg_login, container, false);
         initView(rootView);
         return rootView;
     }
@@ -49,9 +49,9 @@ public class M000LoginFragment extends Fragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         v.startAnimation(AnimationUtils.loadAnimation(mContext, androidx.appcompat.R.anim.abc_fade_in));
-        if(v.getId()==R.id.tv_login){
+        if (v.getId() == R.id.tv_login) {
             login(edtEmail.getText().toString(), edtPass.getText().toString());
-        }else if(v.getId()==R.id.tv_register){
+        } else if (v.getId() == R.id.tv_register) {
             gotoRegisterScreen();
         }
     }
@@ -76,7 +76,7 @@ public class M000LoginFragment extends Fragment implements View.OnClickListener 
 //            return;
 //        }
 
-        if(helper.login(mail,pass))
+        if (helper.login(mail, pass))
             Toast.makeText(mContext, "Login account successfully!", Toast.LENGTH_LONG).show();
         else
             Toast.makeText(mContext, "Wrong email or password", Toast.LENGTH_SHORT).show();

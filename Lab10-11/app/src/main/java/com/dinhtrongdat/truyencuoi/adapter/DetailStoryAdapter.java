@@ -23,20 +23,20 @@ import java.util.List;
 public class DetailStoryAdapter extends FragmentStatePagerAdapter {
     private List<StoryEntity> listStory;
 
-    public DetailStoryAdapter(FragmentManager fm, int behavior,List<StoryEntity> listStory) {
+    public DetailStoryAdapter(FragmentManager fm, int behavior, List<StoryEntity> listStory) {
         super(fm, behavior);
         this.listStory = listStory;
     }
 
     @Override
     public Fragment getItem(int position) {
-        if(listStory == null || listStory.isEmpty()){
+        if (listStory == null || listStory.isEmpty()) {
             return null;
         }
         StoryEntity storyEntity = listStory.get(position);
         M003DetailStoryFrg frg = new M003DetailStoryFrg();
         Bundle bundle = new Bundle();
-        bundle.putSerializable("story",storyEntity);
+        bundle.putSerializable("story", storyEntity);
         frg.setArguments(bundle);
         return frg;
     }

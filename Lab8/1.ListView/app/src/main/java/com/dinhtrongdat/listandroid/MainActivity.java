@@ -13,17 +13,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] title = new String[]{"Android","IOS","Window Phone"};
-    String[] contents = new String[]{
-            "Day la he dieu hanh android",
-            "Day la he dieu hanh IOS",
-            "Day la he dieu hanh Window Phone"
-    };
-    int[] imgs = new int[]{
-            R.drawable.android_dark,
-            R.drawable.ios_dark,
-            R.drawable.window_dark
-    };
+    String[] title = new String[]{"Android", "IOS", "Window Phone"};
+    String[] contents = new String[]{"Day la he dieu hanh android", "Day la he dieu hanh IOS", "Day la he dieu hanh Window Phone"};
+    int[] imgs = new int[]{R.drawable.android_dark, R.drawable.ios_dark, R.drawable.window_dark};
     ListView lvMain;
     TextView txtDisplay;
 
@@ -31,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         initUI();
     }
 
@@ -39,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         lvMain = findViewById(R.id.lvMain);
         txtDisplay = findViewById(R.id.txtDisplay);
         ArrayList<Product> list = new ArrayList<>();
-        for(int i = 0;i<title.length; i++){
+        for (int i = 0; i < title.length; i++) {
             list.add(new Product(imgs[i], title[i], contents[i]));
         }
         ListViewAdapter adapter = new ListViewAdapter(list);

@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    SeekBar sbR,sbG,sbB;
+    SeekBar sbR, sbG, sbB;
     CardView cvRGB, cvCMY;
     TextView txtR, txtG, txtB;
-    int RColor=0, GColor=0,BColor=0;
+    int RColor = 0, GColor = 0, BColor = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
         sbR.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = 0;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progress = i;
                 txtR.setText("R = " + i);
                 RColor = i;
-                int RGBcolor = Color.argb(255,RColor,GColor,BColor);
-                int CMYColor = Color.argb(255,255-RColor,255-GColor,255-BColor);
+                int RGBcolor = Color.argb(255, RColor, GColor, BColor);
+                int CMYColor = Color.argb(255, 255 - RColor, 255 - GColor, 255 - BColor);
                 cvRGB.setCardBackgroundColor(RGBcolor);
                 cvCMY.setCardBackgroundColor(CMYColor);
             }
@@ -63,13 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
         sbG.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = 0;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progress = i;
                 txtG.setText("G = " + i);
                 GColor = i;
-                int RGBcolor = Color.argb(255,RColor,GColor,BColor);
-                int CMYColor = Color.argb(255,255-RColor,255-GColor,255-BColor);
+                int RGBcolor = Color.argb(255, RColor, GColor, BColor);
+                int CMYColor = Color.argb(255, 255 - RColor, 255 - GColor, 255 - BColor);
                 cvRGB.setCardBackgroundColor(RGBcolor);
                 cvCMY.setCardBackgroundColor(CMYColor);
             }
@@ -86,13 +88,14 @@ public class MainActivity extends AppCompatActivity {
         });
         sbB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress = 0;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progress = i;
                 txtB.setText("B = " + i);
                 BColor = i;
-                int RGBcolor = Color.argb(255,RColor,GColor,BColor);
-                int CMYColor = Color.argb(255,255-RColor,255-GColor,255-BColor);
+                int RGBcolor = Color.argb(255, RColor, GColor, BColor);
+                int CMYColor = Color.argb(255, 255 - RColor, 255 - GColor, 255 - BColor);
                 cvRGB.setCardBackgroundColor(RGBcolor);
                 cvCMY.setCardBackgroundColor(CMYColor);
             }

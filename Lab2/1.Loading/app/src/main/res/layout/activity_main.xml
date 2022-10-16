@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
+
     <LinearLayout
+        android:id="@+id/_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/_layout">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/img_view"
@@ -28,8 +28,9 @@
             android:fontFamily="sans-serif-light"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="24sp"/>
+            android:textSize="24sp" />
     </LinearLayout>
-    <include layout="@layout/item_loading"/>
+
+    <include layout="@layout/item_loading" />
 
 </FrameLayout>

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.ln_main, new M000LoginFragment()).commit();
     }
 
-    private void InitialDB(){
+    private void InitialDB() {
         helper = new SQLiteHelper(this);
         helper.openDB();
         helper.createTable();

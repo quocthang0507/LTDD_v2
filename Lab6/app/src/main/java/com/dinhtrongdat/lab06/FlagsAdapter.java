@@ -24,8 +24,8 @@ public class FlagsAdapter extends RecyclerView.Adapter<FlagsAdapter.flagsviewHol
     }
 
     @Override
-    public flagsviewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_itenr_rv,parent,false);
+    public flagsviewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_itenr_rv, parent, false);
         return new flagsviewHolder(view);
     }
 
@@ -47,6 +47,7 @@ public class FlagsAdapter extends RecyclerView.Adapter<FlagsAdapter.flagsviewHol
 
         ImageView imgFlag;
         TextView name, number;
+
         public flagsviewHolder(View itemView) {
             super(itemView);
             imgFlag = itemView.findViewById(R.id.imageView);

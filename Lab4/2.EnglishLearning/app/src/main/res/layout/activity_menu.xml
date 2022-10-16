@@ -7,11 +7,12 @@
     android:orientation="vertical"
     tools:context=".Menu">
 
-    <include layout="@layout/actionbar_home"/>
+    <include layout="@layout/actionbar_home" />
+
     <LinearLayout
         android:id="@+id/ln_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical" />
 
 </LinearLayout>

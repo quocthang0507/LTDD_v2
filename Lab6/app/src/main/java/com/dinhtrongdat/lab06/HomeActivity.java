@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     CardView cvTienTe, cvDoDai;
     ConstraintLayout cont;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_DoDai:
                 startActivity(new Intent(HomeActivity.this, DoiDoDai.class));
                 break;
@@ -42,7 +43,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-    private void setAnimation(int anim){
+
+    private void setAnimation(int anim) {
         LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(this, anim);
         cont.setLayoutAnimation(layoutAnimationController);
     }

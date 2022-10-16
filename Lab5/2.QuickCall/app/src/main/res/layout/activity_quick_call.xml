@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".QuickCall">
+    tools:context=".MainActivity">
 
-    <include layout="@layout/actionbar_home"/>
+    <include layout="@layout/actionbar_home" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,9 +17,9 @@
         android:padding="20dp">
 
         <FrameLayout
+            android:id="@+id/fr_mom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fr_mom"
             android:background="@drawable/bg_radius"
             android:backgroundTint="#786835"
             android:gravity="center_vertical"
@@ -30,6 +31,7 @@
                 android:layout_height="60dp"
                 android:src="@drawable/call1"
                 tools:ignore="ContentDescription" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,11 +51,13 @@
             android:gravity="center_vertical"
             android:padding="10dp"
             android:tag="@string/phone_dad">
+
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/call2"
                 tools:ignore="ContentDescription" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,6 +66,7 @@
                 android:textColor="@color/black"
                 android:textSize="40sp" />
         </FrameLayout>
+
         <FrameLayout
             android:id="@+id/fr_crush"
             android:layout_width="match_parent"
@@ -72,11 +77,13 @@
             android:gravity="center_vertical"
             android:padding="10dp"
             android:tag="@string/phone_crush">
+
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/call3"
                 tools:ignore="ContentDescription" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,6 +92,7 @@
                 android:textColor="@color/white"
                 android:textSize="40sp" />
         </FrameLayout>
+
         <FrameLayout
             android:id="@+id/fr_best_friend"
             android:layout_width="match_parent"
@@ -95,18 +103,20 @@
             android:gravity="center_vertical"
             android:padding="10dp"
             android:tag="@string/phone_best_friend">
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/call4"
-            tools:ignore="ContentDescription" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/txt_best_friend"
-            android:textColor="@color/black"
-            android:textSize="40sp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/call4"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/txt_best_friend"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
         </FrameLayout>
     </LinearLayout>
 

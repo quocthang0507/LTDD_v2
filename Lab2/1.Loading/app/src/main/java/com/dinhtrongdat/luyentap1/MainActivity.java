@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imgView;
     TextView txtView;
     ProgressBar progressBar;
-    private static int SPLAS_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +43,7 @@ public class MainActivity extends AppCompatActivity {
         txtView = (TextView) findViewById(R.id.txt_view);
         layout = (LinearLayout) findViewById(R.id._layout);
         progressBar = (ProgressBar) findViewById(R.id.progess_bar);
-//
-//        String[] mangTen = getResources().getStringArray(R.array.arr_human);
-//        arrName = new ArrayList<>(Arrays.asList(mangTen));
-//
-//        Collections.shuffle(arrName);
-//        int idHinh = getResources().getIdentifier(arrName.get(2), "drawable", getPackageName());
-//        imgView.setImageResource(idHinh);
-//
+
         Anim = AnimationUtils.loadAnimation(this, R.anim.anim);
         int color = Color.argb(255, random.nextInt(256), random.nextInt(256), random.nextInt(256));
 
@@ -67,6 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Activity2.class);
                 startActivity(intent);
             }
-        }, SPLAS_SCREEN);
+        }, SPLASH_SCREEN);
     }
 }

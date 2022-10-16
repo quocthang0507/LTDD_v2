@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-    private void init(){
+    private void init() {
         edtX = (EditText) findViewById(R.id.edtX);
         edtY = (EditText) findViewById(R.id.edtY);
         txtResult = (TextView) findViewById(R.id.txtResult);
@@ -31,46 +31,46 @@ public class MainActivity extends AppCompatActivity {
         btnMul = (Button) findViewById(R.id.btnMul);
         btnDev = (Button) findViewById(R.id.btnDev);
 
-            btnPlus.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int x = Integer.parseInt(edtX.getText().toString());
-                    int y = Integer.parseInt(edtY.getText().toString());
-                    int result = x + y;
-                    txtResult.setText(String.valueOf(result));
-                }
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int x = Integer.parseInt(edtX.getText().toString());
+                int y = Integer.parseInt(edtY.getText().toString());
+                int result = x + y;
+                txtResult.setText(String.valueOf(result));
+            }
 
-            });
+        });
 
-            btnSub.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int x = Integer.parseInt(edtX.getText().toString());
-                    int y = Integer.parseInt(edtY.getText().toString());
-                    int result = x - y;
-                    txtResult.setText(String.valueOf(result));
-                }
-            });
+        btnSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int x = Integer.parseInt(edtX.getText().toString());
+                int y = Integer.parseInt(edtY.getText().toString());
+                int result = x - y;
+                txtResult.setText(String.valueOf(result));
+            }
+        });
 
-            btnMul.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int x = Integer.parseInt(edtX.getText().toString());
-                    int y = Integer.parseInt(edtY.getText().toString());
-                    int result = x * y;
-                    txtResult.setText(String.valueOf(result));
-                }
-            });
+        btnMul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int x = Integer.parseInt(edtX.getText().toString());
+                int y = Integer.parseInt(edtY.getText().toString());
+                int result = x * y;
+                txtResult.setText(String.valueOf(result));
+            }
+        });
 
-            btnDev.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int x = Integer.parseInt(edtX.getText().toString());
-                    int y = Integer.parseInt(edtY.getText().toString());
-                    int result = x / y;
-                    txtResult.setText(String.valueOf(result));
-                }
-            });
+        btnDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int x = Integer.parseInt(edtX.getText().toString());
+                int y = Integer.parseInt(edtY.getText().toString());
+                int result = x / y;
+                txtResult.setText(String.valueOf(result));
+            }
+        });
     }
 
 

@@ -22,17 +22,18 @@ import java.util.ArrayList;
 public class M003DetailStoryFrg extends Fragment {
 
     private TextView txtName, txtContent;
+
     @Override
-    public View onCreateView( LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.ite_detail_story, container, false);
 
         txtName = rootView.findViewById(R.id.tv_name);
         txtContent = rootView.findViewById(R.id.tv_content);
 
         Bundle bundle = getArguments();
-        if(bundle != null){
+        if (bundle != null) {
             StoryEntity storyEntity = (StoryEntity) bundle.get("story");
-            if(storyEntity!=null){
+            if (storyEntity != null) {
                 txtName.setText(storyEntity.getName());
                 txtContent.setText(storyEntity.getContent());
             }

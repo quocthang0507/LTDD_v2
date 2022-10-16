@@ -32,8 +32,8 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
-        View view = View.inflate(viewGroup.getContext(), R.layout.custom_listview,null);
-        Product product = (Product)getItem(i);
+        View view = View.inflate(viewGroup.getContext(), R.layout.custom_listview, null);
+        Product product = (Product) getItem(i);
         ImageView img = view.findViewById(R.id.imgRow);
         img.setImageResource(product.image);
         TextView txtTitle = view.findViewById(R.id.txtTitle);

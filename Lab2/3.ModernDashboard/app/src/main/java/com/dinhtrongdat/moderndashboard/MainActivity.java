@@ -1,4 +1,4 @@
-package com.dinhtrongdat.modemdashboard;
+package com.dinhtrongdat.moderndashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 

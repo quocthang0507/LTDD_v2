@@ -3,14 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Face_Emoji"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Face_Emoji">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/bg_emoji" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,10 +19,12 @@
         android:orientation="vertical"
         android:paddingHorizontal="10dp"
         android:paddingTop="30dp">
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <ImageView
                 android:id="@+id/iv_face1"
                 android:layout_width="100dp"
@@ -29,7 +32,8 @@
                 android:background="@drawable/bg_radius"
                 android:padding="10dp"
                 android:src="@drawable/angry"
-                tools:ignore="ContentDescription"/>
+                tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face2"
                 android:layout_width="100dp"
@@ -39,6 +43,7 @@
                 android:padding="10dp"
                 android:src="@drawable/cry"
                 tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face3"
                 android:layout_width="100dp"
@@ -49,11 +54,13 @@
                 android:src="@drawable/cute"
                 tools:ignore="ContentDescription" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
             <ImageView
                 android:id="@+id/iv_face4"
                 android:layout_width="100dp"
@@ -61,7 +68,8 @@
                 android:background="@drawable/bg_radius"
                 android:padding="10dp"
                 android:src="@drawable/laugh"
-                tools:ignore="ContentDescription"/>
+                tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face5"
                 android:layout_width="100dp"
@@ -71,6 +79,7 @@
                 android:padding="10dp"
                 android:src="@drawable/sad"
                 tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face6"
                 android:layout_width="100dp"
@@ -81,11 +90,13 @@
                 android:src="@drawable/sick"
                 tools:ignore="ContentDescription" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
             <ImageView
                 android:id="@+id/iv_face7"
                 android:layout_width="100dp"
@@ -93,7 +104,8 @@
                 android:background="@drawable/bg_radius"
                 android:padding="10dp"
                 android:src="@drawable/sleep"
-                tools:ignore="ContentDescription"/>
+                tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face8"
                 android:layout_width="100dp"
@@ -103,6 +115,7 @@
                 android:padding="10dp"
                 android:src="@drawable/smile"
                 tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/iv_face9"
                 android:layout_width="100dp"
@@ -113,14 +126,15 @@
                 android:src="@drawable/wow"
                 tools:ignore="ContentDescription" />
         </TableRow>
+
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_refres"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_refest"
-            android:background="@drawable/bg_radius"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radius"
+            android:src="@drawable/ic_refest" />
 
     </LinearLayout>
 </FrameLayout>

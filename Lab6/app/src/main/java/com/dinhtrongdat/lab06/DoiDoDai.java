@@ -22,7 +22,7 @@ import java.util.List;
 public class DoiDoDai extends AppCompatActivity {
 
     private String[] units = {
-            "Hải lý", "Dặm", "Kilometer", "Lý","Met", "Yard", "Foot", "Inches"
+            "Hải lý", "Dặm", "Kilometer", "Lý", "Met", "Yard", "Foot", "Inches"
     };
 
     private double[][] ratio = {
@@ -65,14 +65,14 @@ public class DoiDoDai extends AppCompatActivity {
         doDaiRecycle.setHasFixedSize(true);
 
         mdata = new ArrayList<>();
-        mdata.add(new DoDai("Hải lý",0));
-        mdata.add(new DoDai("Dặm",0));
-        mdata.add(new DoDai("Kilometer",0));
-        mdata.add(new DoDai("Lý",0));
-        mdata.add(new DoDai("Met",0));
-        mdata.add(new DoDai("Yard",0));
-        mdata.add(new DoDai("Foot",0));
-        mdata.add(new DoDai("Inches",0));
+        mdata.add(new DoDai("Hải lý", 0));
+        mdata.add(new DoDai("Dặm", 0));
+        mdata.add(new DoDai("Kilometer", 0));
+        mdata.add(new DoDai("Lý", 0));
+        mdata.add(new DoDai("Met", 0));
+        mdata.add(new DoDai("Yard", 0));
+        mdata.add(new DoDai("Foot", 0));
+        mdata.add(new DoDai("Inches", 0));
 
         doDaiAdapter = new DoDaiAdapter(mdata);
         doDaiAdapter.notifyDataSetChanged();
@@ -107,18 +107,20 @@ public class DoiDoDai extends AppCompatActivity {
             }
         });
     }
-    private void setAnimation(int anim){
+
+    private void setAnimation(int anim) {
         LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(this, anim);
         doDaiRecycle.setLayoutAnimation(layoutAnimationController);
     }
-    private void changeMoneyUnit(){
+
+    private void changeMoneyUnit() {
         int index = spnUnit.getSelectedItemPosition();
-        if(index <0) index = 0;
+        if (index < 0) index = 0;
         String input = txtNumber.getText().toString();
-        if(input.isEmpty()) input ="0";
+        if (input.isEmpty()) input = "0";
 
         double money = Double.valueOf(input);
-        for(int i=0;i<mdata.size();i++){
+        for (int i = 0; i < mdata.size(); i++) {
             double temp = money * ratio[index][i];
             mdata.get(i).setDoDai(temp);
             doDaiAdapter.notifyDataSetChanged();

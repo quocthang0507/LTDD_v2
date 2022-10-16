@@ -6,13 +6,16 @@
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <View
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@drawable/bg_top" />
+
         <ImageView
             android:id="@+id/iv_back"
             android:layout_width="56dp"
@@ -21,17 +24,19 @@
             android:src="@drawable/ic_baseline_arrow_back_ios_24"
             app:tint="@color/white"
             tools:ignore="ContentDescription" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="220dp"
             android:layout_marginRight="30dp"
-            android:textStyle="bold"
             android:text="@string/txt_register"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
     </FrameLayout>
+
     <EditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
@@ -47,6 +52,7 @@
         android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textSize="18sp" />
+
     <EditText
         android:id="@+id/edt_pass"
         android:layout_width="match_parent"
@@ -62,6 +68,7 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:textSize="18sp" />
+
     <EditText
         android:id="@+id/edt_re_pass"
         android:layout_width="match_parent"
@@ -77,6 +84,7 @@
         android:inputType="textPassword"
         android:padding="10dp"
         android:textSize="18sp" />
+
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="match_parent"

@@ -24,21 +24,21 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-    private void init(){
+    private void init() {
         imgDice = (ImageView) findViewById(R.id.imgView);
 
         String[] mangTen = getResources().getStringArray(R.array.arr_dice);
         arrName = new ArrayList<>(Arrays.asList(mangTen));
 
         Collections.shuffle(arrName);
-        int idHinh = getResources().getIdentifier(arrName.get(3),"drawable", getPackageName());
+        int idHinh = getResources().getIdentifier(arrName.get(3), "drawable", getPackageName());
         imgDice.setImageResource(idHinh);
 
         imgDice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Collections.shuffle(arrName);
-                int idHinh = getResources().getIdentifier(arrName.get(3),"drawable", getPackageName());
+                int idHinh = getResources().getIdentifier(arrName.get(3), "drawable", getPackageName());
                 imgDice.setImageResource(idHinh);
             }
         });

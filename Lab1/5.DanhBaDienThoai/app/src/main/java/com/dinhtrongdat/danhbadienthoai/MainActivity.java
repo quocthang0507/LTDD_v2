@@ -12,7 +12,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -25,7 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<contast> list;
+    private ArrayList<Contact> list;
     private CustomAdapter adapter;
     private EditText txtName;
     private EditText txtNum;
@@ -59,24 +58,20 @@ public class MainActivity extends AppCompatActivity {
                 String rela = "Gia đình";
                 String name = txtName.getText().toString().trim();
                 String num = txtNum.getText().toString().trim();
-                if(btngrFamily.isChecked()){
+                if (btngrFamily.isChecked()) {
                     rela = btngrFamily.getText().toString().trim();
-                }
-                else if(btngrFriend.isChecked()){
+                } else if (btngrFriend.isChecked()) {
                     rela = btngrFriend.getText().toString().trim();
-                }
-                else if(btngrCompany.isChecked()){
+                } else if (btngrCompany.isChecked()) {
                     rela = btngrCompany.getText().toString().trim();
-                }
-                else if(btngrSchool.isChecked()){
+                } else if (btngrSchool.isChecked()) {
                     rela = btngrSchool.getText().toString().trim();
                 }
 
-                if(name.equals("") || num.equals("")){
-                    Toast.makeText(MainActivity.this,"Xin mời nhập đầy đủ số điện thoại và tên", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    contast con = new contast(name,num,rela);
+                if (name.equals("") || num.equals("")) {
+                    Toast.makeText(MainActivity.this, "Xin mời nhập đầy đủ số điện thoại và tên", Toast.LENGTH_LONG).show();
+                } else {
+                    Contact con = new Contact(name, num, rela);
                     list.add(con);
 
                 }
@@ -87,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void setWidget(){
+    public void setWidget() {
         txtName = (EditText) findViewById(R.id.txt_name);
         txtNum = (EditText) findViewById(R.id.txt_sdt);
         btngrFamily = (RadioButton) findViewById(R.id.btngr_fm);
@@ -98,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btn_add);
     }
 
-    public void ShowDialog(int position){
+    public void ShowDialog(int position) {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_view);
 
@@ -122,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    private void checkAndRequesPermissions(){
+    private void checkAndRequesPermissions() {
         String[] permissions = new String[]{
                 Manifest.permission.CALL_PHONE,
                 Manifest.permission.SEND_SMS
@@ -134,23 +129,23 @@ public class MainActivity extends AppCompatActivity {
                 listPermissionNeeded.add(permission);
             }
         }
-        if(!listPermissionNeeded.isEmpty()){
-            ActivityCompat.requestPermissions(this, listPermissionNeeded.toArray(new String[listPermissionNeeded.size()]),1);
+        if (!listPermissionNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(this, listPermissionNeeded.toArray(new String[listPermissionNeeded.size()]), 1);
 
         }
     }
 
-    private void intentCall(int posiotion){
+    private void intentCall(int posiotion) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+list.get(posiotion).getmNumPhone()));
+        intent.setData(Uri.parse("tel:" + list.get(posiotion).getmNumPhone()));
         startActivity(intent);
     }
 
-    private void intentSendMessage(int posiotion){
+    private void intentSendMessage(int posiotion) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("tel:"+list.get(posiotion).getmNumPhone()));
+        intent.setData(Uri.parse("tel:" + list.get(posiotion).getmNumPhone()));
         startActivity(intent);
     }
 

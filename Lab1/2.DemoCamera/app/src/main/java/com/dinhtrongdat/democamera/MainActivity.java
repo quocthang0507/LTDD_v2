@@ -25,21 +25,21 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-    private void init(){
+    private void init() {
         btnTake = (Button) findViewById(R.id.btnCamera);
         imgView = (ImageView) findViewById(R.id.imgView);
         btnTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent,REQUEST_CAMERA);
+                startActivityForResult(intent, REQUEST_CAMERA);
             }
         });
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable  Intent data) {
-        if(requestCode == REQUEST_CAMERA && resultCode == RESULT_OK && data!= null){
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == REQUEST_CAMERA && resultCode == RESULT_OK && data != null) {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             imgView.setImageBitmap(bitmap);
         }

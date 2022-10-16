@@ -9,6 +9,7 @@ import android.widget.ImageView;
 public class act_detail_rabbit extends AppCompatActivity {
 
     ImageView iv_faforite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

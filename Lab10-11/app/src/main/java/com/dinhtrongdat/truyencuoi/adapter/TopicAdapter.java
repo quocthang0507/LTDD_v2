@@ -26,13 +26,13 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
     }
 
     @Override
-    public TopicViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+    public TopicViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_topic, parent, false);
         return new TopicViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder( TopicAdapter.TopicViewHolder holder, int position) {
+    public void onBindViewHolder(TopicAdapter.TopicViewHolder holder, int position) {
         Topic topicHelper = topicLocation.get(position);
         holder.imgView.setImageBitmap(topicHelper.getImg());
         holder.txtView.setText(topicHelper.getName());

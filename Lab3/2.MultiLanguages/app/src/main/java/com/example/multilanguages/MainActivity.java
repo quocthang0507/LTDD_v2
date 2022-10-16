@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         initUI();
     }
 
-    private void initUI(){
+    private void initUI() {
         btnUS = (ImageButton) findViewById(R.id.btn_us);
         btnVN = (ImageButton) findViewById(R.id.btn_vn);
         btnFR = (ImageButton) findViewById(R.id.btn_fr);
@@ -28,25 +28,25 @@ public class MainActivity extends AppCompatActivity {
         btnFR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeLanguage("fr","FR");
+                changeLanguage("fr", "FR");
             }
         });
         btnVN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeLanguage("vi","VN");
+                changeLanguage("vi", "VN");
             }
         });
         btnUS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeLanguage("en","US");
+                changeLanguage("en", "US");
             }
         });
     }
 
-    public void changeLanguage(String language, String lan){
-        Locale locale = new Locale(language,lan);
+    public void changeLanguage(String language, String lan) {
+        Locale locale = new Locale(language, lan);
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(

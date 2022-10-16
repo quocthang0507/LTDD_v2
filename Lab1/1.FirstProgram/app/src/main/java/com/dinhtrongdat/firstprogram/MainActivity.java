@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         initControl();
     }
 
-    private void initControl(){
+    private void initControl() {
         edtX = (EditText) findViewById(R.id.edtX);
         edtY = (EditText) findViewById(R.id.edtY);
         txtResult = (TextView) findViewById(R.id.txtResult);

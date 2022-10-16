@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             {0.08541, 0.06877, 0.05473, 5.40852, 0.10398, 0.09924, 1.00000, 0.11037, 10.0996, 1825.87},
             {0.77402, 0.62319, 0.49597, 49.0031, 0.94215, 0.89951, 9.06754, 1.00000, 91.5139, 16552.1},
             {0.00846, 0.00681, 0.00542, 0.53547, 0.0103, 0.00983, 0.09908, 0.01093, 1.00000, 180.837},
-            {0.00005, 0.00004, 0.00003, 0.00296, 0.00006, 0.00005, 0.00055, 0.00006, 0.00553,1.00000}
+            {0.00005, 0.00004, 0.00003, 0.00296, 0.00006, 0.00005, 0.00055, 0.00006, 0.00553, 1.00000}
     };
     private EditText txtNumber;
     private Spinner spnUnit;
@@ -66,16 +66,16 @@ public class MainActivity extends AppCompatActivity {
         flagRecycle.setHasFixedSize(true);
 
         mdata = new ArrayList<>();
-        mdata.add(new Flag("USD",R.drawable.usd,0));
-        mdata.add(new Flag("EUR",R.drawable.eur,0));
-        mdata.add(new Flag("GBP",R.drawable.gbp,0));
-        mdata.add(new Flag("INR",R.drawable.inr,0));
-        mdata.add(new Flag("AUD",R.drawable.aud,0));
-        mdata.add(new Flag("CAD",R.drawable.cad,0));
-        mdata.add(new Flag("ZAR",R.drawable.zar,0));
-        mdata.add(new Flag("NZD",R.drawable.nzd,0));
-        mdata.add(new Flag("JPY",R.drawable.jav,0));
-        mdata.add(new Flag("VNĐ",R.drawable.vnd,0));
+        mdata.add(new Flag("USD", R.drawable.usd, 0));
+        mdata.add(new Flag("EUR", R.drawable.eur, 0));
+        mdata.add(new Flag("GBP", R.drawable.gbp, 0));
+        mdata.add(new Flag("INR", R.drawable.inr, 0));
+        mdata.add(new Flag("AUD", R.drawable.aud, 0));
+        mdata.add(new Flag("CAD", R.drawable.cad, 0));
+        mdata.add(new Flag("ZAR", R.drawable.zar, 0));
+        mdata.add(new Flag("NZD", R.drawable.nzd, 0));
+        mdata.add(new Flag("JPY", R.drawable.jav, 0));
+        mdata.add(new Flag("VNĐ", R.drawable.vnd, 0));
 
         flagAdapter = new FlagsAdapter(mdata);
         flagAdapter.notifyDataSetChanged();
@@ -111,18 +111,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void setAnimation(int anim){
+
+    private void setAnimation(int anim) {
         LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(this, anim);
         flagRecycle.setLayoutAnimation(layoutAnimationController);
     }
-    private void changeMoneyUnit(){
+
+    private void changeMoneyUnit() {
         int index = spnUnit.getSelectedItemPosition();
-        if(index <0) index = 0;
+        if (index < 0) index = 0;
         String input = txtNumber.getText().toString();
-        if(input.isEmpty()) input ="0";
+        if (input.isEmpty()) input = "0";
 
         double money = Double.valueOf(input);
-        for(int i=0;i<mdata.size();i++){
+        for (int i = 0; i < mdata.size(); i++) {
             double temp = money * ratio[index][i];
             mdata.get(i).setMoney(temp);
             flagAdapter.notifyDataSetChanged();

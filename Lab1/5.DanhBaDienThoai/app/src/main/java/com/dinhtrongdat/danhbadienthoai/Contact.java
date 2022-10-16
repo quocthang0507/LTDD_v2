@@ -1,13 +1,11 @@
 package com.dinhtrongdat.danhbadienthoai;
 
-import java.util.PrimitiveIterator;
-
-public class contast {
+public class Contact {
     private String mName;
     private String mNumPhone;
     private String mAvatar;
 
-    public contast(String mName, String mNumPhone, String mAvatar) {
+    public Contact(String mName, String mNumPhone, String mAvatar) {
         this.mName = mName;
         this.mNumPhone = mNumPhone;
         this.mAvatar = mAvatar;

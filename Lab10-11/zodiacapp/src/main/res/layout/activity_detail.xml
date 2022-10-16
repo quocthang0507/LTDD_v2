@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
-    android:background="#FFC107">
+    android:background="#FFC107"
+    tools:context=".DetailActivity">
 
     <TextView
         android:id="@+id/txt_detail_title"
@@ -19,6 +19,7 @@
         app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/txt_detail_date"
         android:layout_width="wrap_content"
@@ -35,26 +36,28 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginTop="120dp"
         android:background="@drawable/bg_description"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="30dp">
+
             <TextView
                 android:id="@+id/txt_detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:layout_margin="10dp"/>
+                android:textSize="20sp" />
         </ScrollView>
 
     </LinearLayout>
@@ -77,12 +80,12 @@
         android:layout_height="40dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_back"
+        android:text="Back"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/bg_btn_back"
-        android:text="Back"
-        android:textColor="@color/white"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

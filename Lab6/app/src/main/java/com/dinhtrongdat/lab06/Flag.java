@@ -7,7 +7,7 @@ public class Flag implements Serializable {
     private int imgFlag;
     private double money;
 
-    public Flag(String name, int imgFlag,double money) {
+    public Flag(String name, int imgFlag, double money) {
         this.name = name;
         this.imgFlag = imgFlag;
         this.money = money;

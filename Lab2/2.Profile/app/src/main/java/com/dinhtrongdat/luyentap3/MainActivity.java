@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imgCall;
     TextView numberPhone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Hook();
     }
 
-    private void Hook(){
+    private void Hook() {
         imgCall = (ImageView) findViewById(R.id.img_call);
         numberPhone = (TextView) findViewById(R.id.number_phone);
 
@@ -39,25 +40,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void intentCall(){
+
+    private void intentCall() {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:"+numberPhone.getText()));
+        intent.setData(Uri.parse("tel:" + numberPhone.getText()));
         startActivity(intent);
     }
-    private void checkAndRequestPermission(){
+
+    private void checkAndRequestPermission() {
         String[] permissions = new String[]{
                 Manifest.permission.CALL_PHONE
         };
 
         List<String> listPermissionNeed = new ArrayList<>();
-        for(String permission : permissions){
-            if(ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED){
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
                 listPermissionNeed.add(permission);
             }
         }
-        if(!listPermissionNeed.isEmpty()){
-            ActivityCompat.requestPermissions(this, listPermissionNeed.toArray(new String[listPermissionNeed.size()]),1);
+        if (!listPermissionNeed.isEmpty()) {
+            ActivityCompat.requestPermissions(this, listPermissionNeed.toArray(new String[listPermissionNeed.size()]), 1);
         }
     }
 }

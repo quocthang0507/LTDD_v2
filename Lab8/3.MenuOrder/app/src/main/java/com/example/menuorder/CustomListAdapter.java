@@ -45,7 +45,7 @@ public class CustomListAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
-        if (view == null){
+        if (view == null) {
             holder = new ViewHolder();
             view = LayoutInflater.from(context).inflate(R.layout.menu_order, viewGroup, false);
 
@@ -57,8 +57,7 @@ public class CustomListAdapter extends BaseAdapter {
             holder.btnDel = view.findViewById(R.id.btnDel);
 
             view.setTag(holder);
-        }
-        else{
+        } else {
             holder = (ViewHolder) view.getTag();
         }
 
@@ -86,7 +85,7 @@ public class CustomListAdapter extends BaseAdapter {
         return view;
     }
 
-    private void DialogEdit(int pos){
+    private void DialogEdit(int pos) {
         Food food = foodList.get(pos);
         Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.dialog_add);
@@ -115,8 +114,8 @@ public class CustomListAdapter extends BaseAdapter {
         dialog.show();
     }
 
-    public class ViewHolder{
-        TextView txtName,txtVN,txtPrice;
+    public class ViewHolder {
+        TextView txtName, txtVN, txtPrice;
         ImageView imgView;
         ImageButton btnEdit, btnDel;
     }

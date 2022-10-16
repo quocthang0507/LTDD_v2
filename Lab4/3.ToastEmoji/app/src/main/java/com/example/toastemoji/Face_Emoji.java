@@ -30,8 +30,8 @@ public class Face_Emoji extends Fragment implements View.OnClickListener {
     public static ArrayList<String> arrName;
 
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_face_emoji,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_face_emoji, container, false);
         initUI(rootView);
         return rootView;
     }
@@ -41,8 +41,9 @@ public class Face_Emoji extends Fragment implements View.OnClickListener {
         mContext = context;
         super.onAttach(context);
     }
-    private void initUI(View v){
-        for(int id :ids){
+
+    private void initUI(View v) {
+        for (int id : ids) {
             v.findViewById(id).setOnClickListener(this);
         }
 
@@ -58,7 +59,7 @@ public class Face_Emoji extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
 //        ImageView ivFace = (ImageView) view;
 //        showToast(ivFace.getDrawable());
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_refres:
                 //Tron mang cac hinh anh
                 Collections.shuffle(arrName);
@@ -72,7 +73,7 @@ public class Face_Emoji extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void showToast(Drawable drawable){
+    private void showToast(Drawable drawable) {
         Toast toast = new Toast(mContext);
         ImageView ivEmoji = new ImageView(mContext);
         ivEmoji.setImageDrawable(drawable);
@@ -80,7 +81,7 @@ public class Face_Emoji extends Fragment implements View.OnClickListener {
         toast.show();
     }
 
-    private void randToast(int id){
+    private void randToast(int id) {
         Toast toast = new Toast(mContext);
         ImageView ivEmoji = new ImageView(mContext);
         ivEmoji.setImageResource(id);

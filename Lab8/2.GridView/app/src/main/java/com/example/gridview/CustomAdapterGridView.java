@@ -41,15 +41,14 @@ public class CustomAdapterGridView extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
-        if(view == null){
-            view = layoutInflater.inflate(R.layout.custom_item,null);
+        if (view == null) {
+            view = layoutInflater.inflate(R.layout.custom_item, null);
             holder = new ViewHolder();
             holder.imgView = view.findViewById(R.id.imageView);
             holder.txtTitle = view.findViewById(R.id.textView_title);
             holder.txtNumber = view.findViewById(R.id.textView_population);
             view.setTag(holder);
-        }
-        else{
+        } else {
             holder = (ViewHolder) view.getTag();
         }
 
@@ -60,7 +59,8 @@ public class CustomAdapterGridView extends BaseAdapter {
 
         return view;
     }
-    public class ViewHolder{
+
+    public class ViewHolder {
         ImageView imgView;
         TextView txtTitle, txtNumber;
     }

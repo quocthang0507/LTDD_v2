@@ -21,7 +21,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MusicHolder>
     }
 
     @Override
-    public MusicHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+    public MusicHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_song, parent, false);
         return new MusicHolder(view);
     }
@@ -38,12 +38,13 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MusicHolder>
 
     public class MusicHolder extends RecyclerView.ViewHolder {
         TextView tvName;
+
         public MusicHolder(View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tv_song);
             itemView.setOnClickListener(v -> {
                 v.startAnimation(AnimationUtils.loadAnimation(mContext, androidx.appcompat.R.anim.abc_fade_in));
-                ((MainActivity) mContext).playSong((SongEntity)tvName.getTag());
+                ((MainActivity) mContext).playSong((SongEntity) tvName.getTag());
             });
         }
     }

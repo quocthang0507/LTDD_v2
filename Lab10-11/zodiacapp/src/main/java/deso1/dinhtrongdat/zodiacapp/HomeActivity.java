@@ -32,7 +32,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initUI() {
         imgCurrent = findViewById(R.id.img_current);
-        txtTitle = findViewById(R.id.txt_title);;
+        txtTitle = findViewById(R.id.txt_title);
+        ;
         txtDate = findViewById(R.id.txt_date);
         txtDes = findViewById(R.id.txt_description);
 
@@ -170,15 +171,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-    private Zodiac readZodiac(String fileName){
-        String mTitle = null, mDate = null, mDescription = null, mDetail= null;
-        int img = getResources().getIdentifier(fileName,"drawable", getPackageName());
+
+    private Zodiac readZodiac(String fileName) {
+        String mTitle = null, mDate = null, mDescription = null, mDetail = null;
+        int img = getResources().getIdentifier(fileName, "drawable", getPackageName());
         BufferedReader reader = null;
-        try{
+        try {
             reader = new BufferedReader(
-              new InputStreamReader(this.getAssets().open("zodiac/"+fileName+".txt"),"UTF-8"));
-            String line ="";
-            while ((line=reader.readLine())!=null){
+                    new InputStreamReader(this.getAssets().open("zodiac/" + fileName + ".txt"), "UTF-8"));
+            String line = "";
+            while ((line = reader.readLine()) != null) {
                 String[] data = line.split("\\*");
                 mTitle = data[0];
                 mDate = data[1];
@@ -190,6 +192,6 @@ public class HomeActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new Zodiac(mTitle,mDescription,mDate,mDetail,img);
+        return new Zodiac(mTitle, mDescription, mDate, mDetail, img);
     }
 }

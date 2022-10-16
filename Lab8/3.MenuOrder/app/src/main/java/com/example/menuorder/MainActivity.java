@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
         lvFood = (ListView) findViewById(R.id.listView);
         arrFood = new ArrayList<>();
 
-        arrFood.add(new Food("Fried fish ball", "Cá viên chiên", 12.000,R.drawable.cavien));
-        arrFood.add(new Food("Fruit tea", "Chè trái cây", 20.000,R.drawable.chetraincay));
-        arrFood.add(new Food("Hamburgers", "Bánh mì kẹp thịt", 15.000,R.drawable.humberger));
-        arrFood.add(new Food("Beef hotpot", "Lẩu bò", 100.000,R.drawable.laubo));
-        arrFood.add(new Food("Instant noodle", "Mì tôm", 7.000,R.drawable.mitom));
-        arrFood.add(new Food("Dog meat", "Thịt chó", 200.000,R.drawable.thitcho));
-        arrFood.add(new Food("Grilled pork", "Thịt heo nướng", 100.000,R.drawable.thitnuong));
+        arrFood.add(new Food("Fried fish ball", "Cá viên chiên", 12.000, R.drawable.cavien));
+        arrFood.add(new Food("Fruit tea", "Chè trái cây", 20.000, R.drawable.chetraincay));
+        arrFood.add(new Food("Hamburgers", "Bánh mì kẹp thịt", 15.000, R.drawable.humberger));
+        arrFood.add(new Food("Beef hotpot", "Lẩu bò", 100.000, R.drawable.laubo));
+        arrFood.add(new Food("Instant noodle", "Mì tôm", 7.000, R.drawable.mitom));
+        arrFood.add(new Food("Dog meat", "Thịt chó", 200.000, R.drawable.thitcho));
+        arrFood.add(new Food("Grilled pork", "Thịt heo nướng", 100.000, R.drawable.thitnuong));
 
         adapter = new CustomListAdapter(arrFood, R.layout.menu_order, this);
         adapter.notifyDataSetChanged();
@@ -50,18 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menuAdd:
                 DialogAdd();
                 break;
             case R.id.menuExit:
-                Toast.makeText(this,"Nhấn nút Home để thoát", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Nhấn nút Home để thoát", Toast.LENGTH_LONG).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void DialogAdd(){
+    private void DialogAdd() {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_add);
 
@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 String name1 = dienTen.getText().toString().trim();
                 String name2 = dienTen2.getText().toString().trim();
                 double price = Double.parseDouble(gia.getText().toString().trim());
-                arrFood.add(new Food(name1,name2,price,R.drawable.food));
+                arrFood.add(new Food(name1, name2, price, R.drawable.food));
                 adapter.notifyDataSetChanged();
-                Toast.makeText(MainActivity.this,"Thêm thành công", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Thêm thành công", Toast.LENGTH_LONG).show();
                 dialog.dismiss();
             }
         });

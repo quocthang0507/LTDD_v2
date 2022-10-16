@@ -18,14 +18,14 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.StoryViewHol
     private ArrayList<StoryEntity> storyLocation;
     private final ListItemClickListener mOnClickListener;
 
-    public StoryAdapter(ArrayList<StoryEntity> storyLocation,ListItemClickListener mOnClickListener) {
+    public StoryAdapter(ArrayList<StoryEntity> storyLocation, ListItemClickListener mOnClickListener) {
         this.storyLocation = storyLocation;
         this.mOnClickListener = mOnClickListener;
     }
 
     @Override
-    public StoryViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_story,parent,false);
+    public StoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_story, parent, false);
         return new StoryViewHolder(view);
     }
 

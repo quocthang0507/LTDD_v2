@@ -8,5 +8,5 @@
         <item>five</item>
         <item>six</item>
     </string-array>
-    <string name="click">Tap to role the dice</string>
+    <string name="click">Tap to roll the dice</string>
 </resources>

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toast"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@color/green"
-    android:id="@+id/custom_toast">
+    android:orientation="vertical">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:src="@drawable/education"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:src="@drawable/education" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Custom Toast, Made by DT. Đạt"
-        android:textSize="20dp"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textAlignment="center"/>
+        android:textSize="20dp" />
 </LinearLayout>

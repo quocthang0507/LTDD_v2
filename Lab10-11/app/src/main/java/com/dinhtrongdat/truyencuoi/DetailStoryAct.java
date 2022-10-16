@@ -24,6 +24,7 @@ public class DetailStoryAct extends AppCompatActivity {
     private TextView ttxtNameTopic;
     DetailStoryAdapter detailStoryAdapter;
     ArrayList<StoryEntity> mdata;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class DetailStoryAct extends AppCompatActivity {
         });
         StoryEntity currentStory = (StoryEntity) getIntent().getExtras().get("current_data");
         ttxtNameTopic.setText(getIntent().getStringExtra("topic"));
-        detailStoryAdapter = new DetailStoryAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,mdata);
+        detailStoryAdapter = new DetailStoryAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, mdata);
         viewPager.setAdapter(detailStoryAdapter);
         viewPager.setCurrentItem(mdata.indexOf(currentStory), true);
         detailStoryAdapter.notifyDataSetChanged();

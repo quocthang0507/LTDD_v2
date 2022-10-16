@@ -22,7 +22,7 @@ public class SplashAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash2);
 
         initUI();
@@ -59,7 +59,7 @@ public class SplashAct extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashAct.this,MainActivity.class);
+                Intent intent = new Intent(SplashAct.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

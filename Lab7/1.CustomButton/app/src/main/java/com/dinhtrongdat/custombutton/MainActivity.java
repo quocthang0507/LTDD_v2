@@ -18,6 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity {
 
     Button btnDialog, btnToast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,13 +58,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showToast(){
+    private void showToast() {
         Toast toast = new Toast(this);
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast));
         toast.setView(view);
 
-        toast.setGravity(Gravity.CENTER,0,0);
+        toast.setGravity(Gravity.CENTER, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.show();
     }

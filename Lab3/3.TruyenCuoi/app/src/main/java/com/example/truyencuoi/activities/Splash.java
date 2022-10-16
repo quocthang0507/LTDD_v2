@@ -1,4 +1,4 @@
-package com.example.truyen_cuoi.activities;
+package com.example.truyencuoi.activities;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.truyen_cuoi.R;
+import com.example.truyencuoi.R;
 
 public class Splash extends Fragment {
     @Override

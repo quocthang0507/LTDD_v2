@@ -15,7 +15,8 @@
         android:padding="10dp"
         android:src="@drawable/ic_back"
         app:tint="@color/white"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -26,6 +27,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         tools:ignore="RtlSymmetry" />
+
     <ImageView
         android:id="@+id/iv_dialer"
         android:layout_width="60dp"

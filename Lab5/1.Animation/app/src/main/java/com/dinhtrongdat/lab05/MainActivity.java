@@ -14,14 +14,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ImageView ivShop;
     private Random rand;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initUI();
     }
-    private void initUI(){
-        ivShop = (ImageView)findViewById(R.id.iv_shoping);
+
+    private void initUI() {
+        ivShop = (ImageView) findViewById(R.id.iv_shoping);
         findViewById(R.id.btn_alpha).setOnClickListener(this);
         findViewById(R.id.bt_rotate).setOnClickListener(this);
         findViewById(R.id.bt_scale).setOnClickListener(this);
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btn_alpha:
                 ivShop.startAnimation(AnimationUtils.loadAnimation(this, R.anim.alpha_anim));
                 break;
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rand = new Random();
                 int random = rand.nextInt(4);
 //                Toast.makeText(MainActivity.this, String.valueOf(random),Toast.LENGTH_LONG).show();
-                switch (random){
+                switch (random) {
                     case 0:
                         ivShop.startAnimation(AnimationUtils.loadAnimation(this, R.anim.alpha_anim));
                         break;

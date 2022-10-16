@@ -20,7 +20,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public SQLiteHelper(@Nullable Context context) {
         super(context, DB_NAME, null, 1);
         this.context = context;
-        myDB = new SQLiteDatabase();
     }
 
     public void openDB() throws SQLException {

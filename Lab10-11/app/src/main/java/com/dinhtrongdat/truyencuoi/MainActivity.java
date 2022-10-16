@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity implements TopicAdapter.List
     }
 
     private void initUI() {
-        try{
+        try {
             topicRecycle.setLayoutManager(new LinearLayoutManager(this));
             mdata = new ArrayList<>();
             String[] listItem = getAssets().list("photo");
 
-            for(String fileName : listItem){
+            for (String fileName : listItem) {
                 String name = fileName.substring(0, fileName.indexOf("."));
 
-                mdata.add(new Topic(BitmapFactory.decodeStream(this.getAssets().open("photo/" + fileName)),name));
+                mdata.add(new Topic(BitmapFactory.decodeStream(this.getAssets().open("photo/" + fileName)), name));
             }
 
             topicAdapter = new TopicAdapter(mdata, this);
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements TopicAdapter.List
             String topicName = name.substring(0, name.indexOf("."));
 
             Intent intent = new Intent(MainActivity.this, StoryAct.class);
-            intent.putExtra("topic_name",topicName);
+            intent.putExtra("topic_name", topicName);
             startActivity(intent);
         } catch (IOException e) {
         }

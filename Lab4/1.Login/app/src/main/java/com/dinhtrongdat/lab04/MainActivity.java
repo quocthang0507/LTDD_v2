@@ -15,13 +15,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText edtEmail, edtPass;
     TextView login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initUI();
     }
-    private void initUI(){
+
+    private void initUI() {
         edtEmail = (EditText) findViewById(R.id.edt_email);
         edtPass = (EditText) findViewById(R.id.edt_pass);
         login = (TextView) findViewById(R.id.login);
@@ -30,24 +32,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.login:
-                 if(!edtEmail.getText().toString().isEmpty() && !edtPass.getText().toString().isEmpty()){
-                     showToast(edtEmail.getText().toString(),edtPass.getText().toString());
+                if (!edtEmail.getText().toString().isEmpty() && !edtPass.getText().toString().isEmpty()) {
+                    showToast(edtEmail.getText().toString(), edtPass.getText().toString());
 
-                 }
+                }
                 break;
         }
     }
-    private void showToast(String email, String pass){
+
+    private void showToast(String email, String pass) {
         Toast toast = new Toast(this);
         LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.custom_toast, (ViewGroup)findViewById(R.id.layout_custom_toast));
+        View view = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.layout_custom_toast));
         TextView txtMess = view.findViewById(R.id.txtView);
-        txtMess.setText("Email là: "+email +"\nMật khẩu là: "+pass);
+        txtMess.setText("Email là: " + email + "\nMật khẩu là: " + pass);
         toast.setView(view);
 
-        toast.setGravity(Gravity.CENTER,0,0);
+        toast.setGravity(Gravity.CENTER, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
         toast.show();
     }
