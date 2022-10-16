@@ -1,4 +1,4 @@
-package com.example.truyencuoi.activities;
+package com.example.truyen_cuoi.activities;
 
 import android.content.res.AssetManager;
 import android.content.res.Resources;
@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.truyencuoi.R;
-import com.example.truyencuoi.classes.StoryEntity;
-import com.example.truyencuoi.adapters.ListCategoryAdapter;
+import com.example.truyen_cuoi.classes.StoryEntity;
+import com.example.truyen_cuoi.adapters.ListCategoryAdapter;
+import com.example.truyen_cuoi.R;
 
 import java.io.IOException;
 import java.util.ArrayList;

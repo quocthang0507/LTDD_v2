@@ -1,4 +1,4 @@
-package com.example.truyencuoi.classes;
+package com.example.truyen_cuoi.classes;
 
 import android.view.View;
 

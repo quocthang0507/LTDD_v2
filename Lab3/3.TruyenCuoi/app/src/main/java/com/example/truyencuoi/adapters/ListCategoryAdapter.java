@@ -1,4 +1,4 @@
-package com.example.truyencuoi.adapters;
+package com.example.truyen_cuoi.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.truyencuoi.classes.ItemClickListener;
-import com.example.truyencuoi.activities.MainActivity;
-import com.example.truyencuoi.R;
-import com.example.truyencuoi.activities.SecondActivity;
-import com.example.truyencuoi.classes.StoryEntity;
+import com.example.truyen_cuoi.classes.ItemClickListener;
+import com.example.truyen_cuoi.activities.MainActivity;
+import com.example.truyen_cuoi.activities.SecondActivity;
+import com.example.truyen_cuoi.classes.StoryEntity;
+import com.example.truyen_cuoi.R;
 
 import java.io.IOException;
 import java.io.InputStream;

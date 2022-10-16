@@ -1,4 +1,4 @@
-package com.example.truyencuoi.classes;
+package com.example.truyen_cuoi.classes;
 
 public class StoryEntity {
     private String title;
