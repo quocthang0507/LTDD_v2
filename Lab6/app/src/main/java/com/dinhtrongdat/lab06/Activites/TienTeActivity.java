@@ -77,7 +77,7 @@ public class TienTeActivity extends AppCompatActivity {
         mdata.add(new Flag("CAD", R.drawable.cad, 0));
         mdata.add(new Flag("ZAR", R.drawable.zar, 0));
         mdata.add(new Flag("NZD", R.drawable.nzd, 0));
-        mdata.add(new Flag("JPY", R.drawable.jav, 0));
+        mdata.add(new Flag("JPY", R.drawable.jpy, 0));
         mdata.add(new Flag("VNĐ", R.drawable.vnd, 0));
 
         flagAdapter = new FlagsAdapter(mdata);
