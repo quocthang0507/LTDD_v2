@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(HomeActivity.this, DoiDoDaiActivity.class));
                 break;
             case R.id.btn_TienTe:
-                startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                startActivity(new Intent(HomeActivity.this, TienTeActivity.class));
                 break;
         }
     }

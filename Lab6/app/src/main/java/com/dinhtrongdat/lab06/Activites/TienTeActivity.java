@@ -22,7 +22,7 @@ import com.dinhtrongdat.lab06.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class TienTeActivity extends AppCompatActivity {
 
     private String[] units = {
             "USD", "EUR", "GBP", "INR", "AUD", "CAD", "ZAR", "NZD", "JPY", "VND"
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_doi_tien_te);
         flagRecycle = findViewById(R.id.rv_unit);
         initUI();
     }
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         spnUnit = findViewById(R.id.spiner);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                MainActivity.this, android.R.layout.simple_spinner_item, units
+                TienTeActivity.this, android.R.layout.simple_spinner_item, units
         );
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
         spnUnit.setAdapter(adapter);
