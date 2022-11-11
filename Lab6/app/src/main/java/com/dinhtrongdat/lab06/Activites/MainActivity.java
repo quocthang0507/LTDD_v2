@@ -1,6 +1,5 @@
-package com.dinhtrongdat.lab06;
+package com.dinhtrongdat.lab06.Activites;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,13 +8,16 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.dinhtrongdat.lab06.Adapters.FlagsAdapter;
+import com.dinhtrongdat.lab06.Classes.Flag;
+import com.dinhtrongdat.lab06.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
             {0.00846, 0.00681, 0.00542, 0.53547, 0.0103, 0.00983, 0.09908, 0.01093, 1.00000, 180.837},
             {0.00005, 0.00004, 0.00003, 0.00296, 0.00006, 0.00005, 0.00055, 0.00006, 0.00553, 1.00000}
     };
+
     private EditText txtNumber;
     private Spinner spnUnit;
-    RecyclerView flagRecycle;
+    private RecyclerView flagRecycle;
     private List<Flag> mdata;
-    RecyclerView.Adapter flagAdapter;
+    private RecyclerView.Adapter flagAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
