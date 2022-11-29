@@ -1,4 +1,4 @@
-package com.dinhtrongdat.lab06;
+package com.dinhtrongdat.lab06.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+
+import com.dinhtrongdat.lab06.R;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,10 +38,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_DoDai:
-                startActivity(new Intent(HomeActivity.this, DoiDoDai.class));
+                startActivity(new Intent(HomeActivity.this, DoiDoDaiActivity.class));
                 break;
             case R.id.btn_TienTe:
-                startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                startActivity(new Intent(HomeActivity.this, TienTeActivity.class));
                 break;
         }
     }

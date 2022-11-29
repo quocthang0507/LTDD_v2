@@ -1,4 +1,4 @@
-package com.dinhtrongdat.lab06;
+package com.dinhtrongdat.lab06.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,12 +14,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import com.dinhtrongdat.lab06.Adapters.DoDaiAdapter;
+import com.dinhtrongdat.lab06.Classes.DoDai;
+import com.dinhtrongdat.lab06.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DoiDoDai extends AppCompatActivity {
+public class DoiDoDaiActivity extends AppCompatActivity {
 
     private String[] units = {
             "Hải lý", "Dặm", "Kilometer", "Lý", "Met", "Yard", "Foot", "Inches"
@@ -38,9 +41,9 @@ public class DoiDoDai extends AppCompatActivity {
 
     private EditText txtNumber;
     private Spinner spnUnit;
-    RecyclerView doDaiRecycle;
+    private RecyclerView doDaiRecycle;
     private List<DoDai> mdata;
-    RecyclerView.Adapter doDaiAdapter;
+    private RecyclerView.Adapter doDaiAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +58,7 @@ public class DoiDoDai extends AppCompatActivity {
         spnUnit = findViewById(R.id.spinerDoDai);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                DoiDoDai.this, android.R.layout.simple_spinner_item, units
+                DoiDoDaiActivity.this, android.R.layout.simple_spinner_item, units
         );
 
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);

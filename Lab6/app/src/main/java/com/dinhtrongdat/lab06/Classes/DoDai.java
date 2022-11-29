@@ -1,4 +1,4 @@
-package com.dinhtrongdat.lab06;
+package com.dinhtrongdat.lab06.Classes;
 
 import java.io.Serializable;
 

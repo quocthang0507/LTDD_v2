@@ -1,25 +1,23 @@
-package com.dinhtrongdat.lab06;
+package com.dinhtrongdat.lab06.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.dinhtrongdat.lab06.Classes.DoDai;
+import com.dinhtrongdat.lab06.R;
 
 import java.util.List;
 
 public class DoDaiAdapter extends RecyclerView.Adapter<DoDaiAdapter.dodaiViewHolder> {
 
-    List<DoDai> mdata;
+    List<DoDai> data;
 
-    public DoDaiAdapter(List<DoDai> mdata) {
-        this.mdata = mdata;
+    public DoDaiAdapter(List<DoDai> data) {
+        this.data = data;
     }
 
     @Override
@@ -30,14 +28,14 @@ public class DoDaiAdapter extends RecyclerView.Adapter<DoDaiAdapter.dodaiViewHol
 
     @Override
     public void onBindViewHolder(DoDaiAdapter.dodaiViewHolder holder, int position) {
-        DoDai doDai = mdata.get(position);
+        DoDai doDai = data.get(position);
         holder.name.setText(doDai.getName());
         holder.number.setText(String.valueOf(doDai.getDoDai()));
     }
 
     @Override
     public int getItemCount() {
-        return mdata.size();
+        return data.size();
     }
 
     public class dodaiViewHolder extends RecyclerView.ViewHolder {
