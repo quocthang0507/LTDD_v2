@@ -25,6 +25,7 @@ public class RaceAnimal extends AppCompatActivity {
     SeekBar skOne, skTwo, skThree;
     ImageButton btnPlay;
     int score = 100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,60 +39,57 @@ public class RaceAnimal extends AppCompatActivity {
 
         txtDiem.setText(String.valueOf(score));
 
-        CountDownTimer countDownTimer = new CountDownTimer(60000,300) {
+        CountDownTimer countDownTimer = new CountDownTimer(60000, 300) {
             @Override
             public void onTick(long l) {
                 int num = 5;
                 Random random = new Random();
 
-                if(skOne.getProgress() >= skOne.getMax()){
+                if (skOne.getProgress() >= skOne.getMax()) {
                     this.cancel();
-                    Toast.makeText(RaceAnimal.this,"One Win",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RaceAnimal.this, "One Win", Toast.LENGTH_LONG).show();
                     btnPlay.setVisibility(View.VISIBLE);
-                    if(cbOne.isChecked()){
+                    if (cbOne.isChecked()) {
                         score += 10;
-                        Toast.makeText(RaceAnimal.this,"Correct",Toast.LENGTH_LONG).show();
-                    }
-                    else{
-                        score -=10;
-                        Toast.makeText(RaceAnimal.this,"Fail",Toast.LENGTH_LONG).show();
+                        Toast.makeText(RaceAnimal.this, "Correct", Toast.LENGTH_LONG).show();
+                    } else {
+                        score -= 10;
+                        Toast.makeText(RaceAnimal.this, "Fail", Toast.LENGTH_LONG).show();
                     }
                     txtDiem.setText(String.valueOf(score));
                     EnableCheckBox();
                 }
-                if(skTwo.getProgress() >= skTwo.getMax()){
+                if (skTwo.getProgress() >= skTwo.getMax()) {
                     this.cancel();
-                    Toast.makeText(RaceAnimal.this,"Two Win",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RaceAnimal.this, "Two Win", Toast.LENGTH_LONG).show();
                     btnPlay.setVisibility(View.VISIBLE);
-                    if(cbTwo.isChecked()){
+                    if (cbTwo.isChecked()) {
                         score += 10;
-                        Toast.makeText(RaceAnimal.this,"Correct",Toast.LENGTH_LONG).show();
-                    }
-                    else{
-                        score -=10;
-                        Toast.makeText(RaceAnimal.this,"Fail",Toast.LENGTH_LONG).show();
+                        Toast.makeText(RaceAnimal.this, "Correct", Toast.LENGTH_LONG).show();
+                    } else {
+                        score -= 10;
+                        Toast.makeText(RaceAnimal.this, "Fail", Toast.LENGTH_LONG).show();
                     }
                     txtDiem.setText(String.valueOf(score));
                     EnableCheckBox();
                 }
-                if(skThree.getProgress() >= skThree.getMax()){
+                if (skThree.getProgress() >= skThree.getMax()) {
                     this.cancel();
-                    Toast.makeText(RaceAnimal.this,"Three Win",Toast.LENGTH_LONG).show();
+                    Toast.makeText(RaceAnimal.this, "Three Win", Toast.LENGTH_LONG).show();
                     btnPlay.setVisibility(View.VISIBLE);
-                    if(cbThree.isChecked()){
+                    if (cbThree.isChecked()) {
                         score += 10;
-                        Toast.makeText(RaceAnimal.this,"Correct",Toast.LENGTH_LONG).show();
-                    }
-                    else{
-                        score -=10;
-                        Toast.makeText(RaceAnimal.this,"Fail",Toast.LENGTH_LONG).show();
+                        Toast.makeText(RaceAnimal.this, "Correct", Toast.LENGTH_LONG).show();
+                    } else {
+                        score -= 10;
+                        Toast.makeText(RaceAnimal.this, "Fail", Toast.LENGTH_LONG).show();
                     }
                     txtDiem.setText(String.valueOf(score));
                     EnableCheckBox();
                 }
-                skOne.setProgress(skOne.getProgress()+random.nextInt(num));
-                skTwo.setProgress(skTwo.getProgress()+random.nextInt(num));
-                skThree.setProgress(skThree.getProgress()+random.nextInt(num));
+                skOne.setProgress(skOne.getProgress() + random.nextInt(num));
+                skTwo.setProgress(skTwo.getProgress() + random.nextInt(num));
+                skThree.setProgress(skThree.getProgress() + random.nextInt(num));
             }
 
             @Override
@@ -103,7 +101,7 @@ public class RaceAnimal extends AppCompatActivity {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cbOne.isChecked() || cbTwo.isChecked() ||cbThree.isChecked()) {
+                if (cbOne.isChecked() || cbTwo.isChecked() || cbThree.isChecked()) {
                     skOne.setProgress(0);
                     skTwo.setProgress(0);
                     skThree.setProgress(0);
@@ -112,9 +110,8 @@ public class RaceAnimal extends AppCompatActivity {
                     btnPlay.setVisibility(View.INVISIBLE);
 
                     DisableCheckbox();
-                }
-                else {
-                    Toast.makeText(RaceAnimal.this,"Cược đê!!!",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(RaceAnimal.this, "Cược đê!!!", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -122,7 +119,7 @@ public class RaceAnimal extends AppCompatActivity {
         cbOne.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b) {
+                if (b) {
                     cbTwo.setChecked(false);
                     cbThree.setChecked(false);
                 }
@@ -131,7 +128,7 @@ public class RaceAnimal extends AppCompatActivity {
         cbTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b) {
+                if (b) {
                     cbOne.setChecked(false);
                     cbThree.setChecked(false);
                 }
@@ -140,7 +137,7 @@ public class RaceAnimal extends AppCompatActivity {
         cbThree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b) {
+                if (b) {
                     cbTwo.setChecked(false);
                     cbOne.setChecked(false);
                 }
@@ -159,13 +156,13 @@ public class RaceAnimal extends AppCompatActivity {
         btnPlay = findViewById(R.id.btnPlay);
     }
 
-    private void EnableCheckBox(){
+    private void EnableCheckBox() {
         cbOne.setEnabled(true);
         cbTwo.setEnabled(true);
         cbThree.setEnabled(true);
     }
 
-    private void DisableCheckbox(){
+    private void DisableCheckbox() {
         cbOne.setEnabled(false);
         cbTwo.setEnabled(false);
         cbThree.setEnabled(false);

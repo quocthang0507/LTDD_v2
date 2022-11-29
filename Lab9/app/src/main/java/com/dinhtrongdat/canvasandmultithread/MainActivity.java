@@ -1,4 +1,4 @@
-package com.dinhtrongdat.canvasandmultithresh;
+package com.dinhtrongdat.canvasandmultithread;
 
 import androidx.appcompat.app.AppCompatActivity;
 
